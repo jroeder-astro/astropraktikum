@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.11)  4 SEP 2018 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.11)  4 SEP 2018 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -409,13 +409,7 @@ LaTeX Info: Redefining \nameref on input line 22.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]pdfTeX warning (ext4): dest
-ination with the same identifier (name{page.1}) has been already used, duplicat
-e ignored
-<to be read again> 
-                   \relax 
-l.32 \end{titlepage}
-                     [1] (./v3.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./v3.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -433,41 +427,59 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 
-      [1] <Parallaxe.png, id=55, 388.83296pt x 609.71451pt>
+l.36 \end{titlepage}
+                     [1] <Parallaxe.png, id=72, 388.83296pt x 609.71451pt>
 File: Parallaxe.png Graphic file (type png)
 
 <use Parallaxe.png>
 Package pdftex.def Info: Parallaxe.png used on input line 59.
-(pdftex.def)             Requested size: 232.62215pt x 364.76163pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
- [2] [3 <./Parallaxe.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
+(pdftex.def)             Requested size: 139.5747pt x 218.8551pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--75
+
+ []
+
+
+Overfull \hbox (2.1591pt too wide) in paragraph at lines 71--75
+\OT1/cmr/m/n/12 Es gibt auch noch ei-ne zwei-te Me-tho-de, mit der man mit-hil-
+fe von Ku-gels-tern-hau-fen Abst[]ande
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.75 
+      [1] [2 <./Parallaxe.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
+ [3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
  (./v3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 84.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
 Package rerunfilecheck Info: File `v3.out' has not changed.
-(rerunfilecheck)             Checksum: AC3EA84AAC47CB4B919028DDE69C0539;406.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 84.
+(rerunfilecheck)             Checksum: 96DE04788459C34943D220D4F80D1BB6;670.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 104.
  ) 
 Here is how much of TeX's memory you used:
- 6884 strings out of 493038
- 98523 string characters out of 6136795
- 193197 words of memory out of 5000000
- 10316 multiletter control sequences out of 15000+600000
- 10102 words of font info for 38 fonts, out of 8000000 for 9000
+ 6903 strings out of 493038
+ 98790 string characters out of 6136795
+ 195242 words of memory out of 5000000
+ 10330 multiletter control sequences out of 15000+600000
+ 12096 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,7n,28p,329b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,7n,28p,492b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on v3.pdf (5 pages, 99170 bytes).
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on v3.pdf (5 pages, 109107 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 62 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 

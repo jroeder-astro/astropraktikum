@@ -24,17 +24,17 @@
 	\textasciitilde
 
 \begin{titlepage}
-    \centering
+	\centering
+	\bigskip
 	\huge{Astronomisches Praktikum: Die Hubble-Konstante}\\
 	\bigskip
-    \large{Versuch 3}\\
-    \huge{Jan R\"{o}der \& Julia Lienert}
+	\large{Versuch 3}\\
+	\bigskip
+	\large{Jan R\"{o}der \& Julia Lienert}
+	\bigskip
+	\tableofcontents
 \end{titlepage}
 
-%headline!!!
-
-
-\tableofcontents
 \pagebreak
 
 \section{Einleitung}
@@ -46,7 +46,7 @@ Cepheiden sind Sterne, die ihre Helligkeit periodisch ändern. Durch Beobachtung 
 	M = -2.81 \log\left(\frac{P}{\text{Tage}}\right) -1.43
 \end{equation}
 auf die absolute Helligkeit geschlossen werden. Zusammen mit der scheinbaren (beobachteten) Helligkeit lässt sich der Abstand über das Entfernungsmodul berechnen.
-\begin{equation}
+\begin{equation} \label{eq:Entfernungsmodul}
 	m - M = 5 \log\left(\frac{r}{10\,\text{pc}}\right)
 \end{equation}
 Diese Methode ist bis zu einigen Megaparsec anwendbar. Mit dem Hubble-Space-Telescope können sogar Sterne in bis zu $20 \,$Mpc Entfernung beobachtet und vermessen werden, was eine Beobachtung auch in benachbarten Galaxien möglich macht.
@@ -56,7 +56,7 @@ Bei dieser Methode wird die scheinbare Bewegung naher Sterne vor einem Fixsternh
 Gemessen wird - wie in Abbildung \ref{fig:Parallaxe} zu sehen ist - der sogenannte Parallaxenwinkel. Über einfache Geometrie kann dann der Abstand des Sterns berechnet werden. Dazu muss der Abstand von der Erde zur Sonne bekannt sein (verwendet wird hierfür der mittlere Kreisbahnradius von $1 \,$AE).
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\textwidth]{Parallaxe.png}
+	\includegraphics[width=0.3\textwidth]{Parallaxe.png}
 	\caption{Skizze zur Erklärung der Parallaxe (entnommen aus [1])}
 	\label{fig:Parallaxe}
 \end{figure}
@@ -67,7 +67,27 @@ Die Parallaxenmethode kann bis etwa $5000 \,$pc verwendet werden, wenn der Winke
 Da Supernovae vom Typ 1a immer gleiche Verläufe ihrer Lichtkurven haben, können sie - wie die Cepheiden - als Standardkerzen verwendet werden. Durch Aufnahme der Lichtkurve und Eichung auf eine Lichtkurve bekannten Abstands lässt sich die Entfernung bestimmen. \\
 Diese Methode hat eine Reichweite von über $1000 \,$Mpc, da Supernovae diesen Typs sehr leuchtkräftig sind.
 
-\subsection{title}
+\subsection{Kugelsternhaufen}
+Alle Sterne in Kugelsternhaufen haben in etwa die gleiche Entfernung zu uns, deshalb ist auch die Differenz zwischen scheinbarer und absoluter Helligkeit (das Entfernungsmodul, siehe Gleichung \eqref{eq:Entfernungsmodul}) gleich. \\
+Unter der Annahme, dass die Hauptreihensterne in Kugelsternhaufen im Hertzsprung-Russell-Diagramm die gleiche Kurve bilden wie die Sterne in Sonnennähe, kann folgendermaßen der Abstand zu diesen Haufen bestimmt werden: Da die Kurven übereinstimmen sollen, kann hieraus die absolute Helligkeit ermittelt werden. Durch Messen der scheinbaren Helligkeit kann aus dem Entfernungsmodul der Abstand des Haufens berechnet werden. \\ \\
+Es gibt auch noch eine zweite Methode, mit der man mithilfe von Kugelsternhaufen Abstände bestimmen kann: Die Helligkeitsverteilung eines solchen Haufens folgt einer Gaußkurve, wobei die Position des Maximums bei konstanter absoluter Helligkeit liegt. Mithilfe der scheinbaren Helligkeit kann so wieder die Entfernung bestimmt werden. Hierfür muss allerdings angenommen werden, dass sich der beobachtete Kugelsternhaufen genauso verhält wie diejenigen in der Milchstraße. \\
+Die Reichweite dieser Methode liegt bei $50 \,$Mpc.
+
+\subsection{Tully-Fisher-Beziehung}
+Die Tully-Fisher-Relation für Spiralgalaxien lautet:
+\begin{equation}
+	L \propto (v_{max})^{\beta}
+\end{equation}
+Die Leuchtkraft einer Spiralgalaxie ist somit proportional zur Potenz der maximalen Rotationsgeschwindigkeit dieser Galaxie. Die Potenz hängt vom betrachteten Spektralbereich ab. \\
+Die Rotationsgeschwindigkeit erhält man aus der Verbreiterung der Spektrallinien: Diese sind verbreitert, da das Licht aus den sich auf uns zubewegenden Armen blauverschoben und das Licht aus den sich von uns wegbewegenden Armen rotverschoben ist. Je schneller sich die Galaxie dreht, umso stärker wird dieser Effekt. \\
+Andererseits hängt die Rotationsgeschwindigkeit einer Spiralgalaxie von deren Masse ab. Unter der Annahme, dass Galaxien mit gleicher Masse gleiche Leuchtkräfte haben und die Leuchtkraft proportional zur Masse zunimmt, kann die absolute Helligkeit der Galaxie berechnet werden. Durch Messen der scheinbaren Helligkeit erhält man über das Entfernungsmodul wieder den Abstand der Galaxie. \\
+Angewendet werden kann diese Methode für Entfernungen größer als $100 \,$Mpc.
+
+\section{Messung der Hubble-Konstanten}
+\subsection{Aufgabe 1}
+Die Radialgeschwindigkeit ist diejenige Geschwindigkeitskomponente, die entlang der Sichtlinie des Beobachters zeigt. Gemessen werden kann sie durch Aufnahme eines Spektrums des auszumessenden Objekts. Vergleicht man die dort sichtbaren Spektrallinien mit bekannten, kann die Rotverschiebung ermittelt werden. Aus dieser erhält man direkt die Geschwindigkeit in radialer Richtung.
+
+\subsection{Aufgabe 2}
 
 
 
@@ -76,7 +96,7 @@ Diese Methode hat eine Reichweite von über $1000 \,$Mpc, da Supernovae diesen Ty
 
 \section{Quellen}
 \begin{enumerate}
-	\item $https://de.wikipedia.org/wiki/Parallaxe$
+	\item https://de.wikipedia.org/wiki/Parallaxe
 \end{enumerate}
 
 
