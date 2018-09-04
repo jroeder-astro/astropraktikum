@@ -25,19 +25,27 @@
 
 \begin{titlepage}
     \centering
+    \bigskip
 	\huge{Astronomisches Praktikum: Quasare}\\
 	\bigskip
     \large{Versuch 2}\\
-    \huge{Jan R\"{o}der \& Julia Lienert}
+    \bigskip
+    \large{Jan R\"{o}der \& Julia Lienert}
+    \bigskip
+    \tableofcontents
 \end{titlepage}
 
 %headline!!!
 
 
-\tableofcontents
-\pagebreak
+%\tableofcontents
 
-\section{Introduction}
+
+\section{Einleitung}
+
+Quasare sind die leuchtkr\"{a}ftigsten Objekte im Universum. Nachdem zu Beginn nur Radioquellen bekannt waren, die im optischen aber trotzdem (wie Sterne) punktf\"{o}rmig waren, nannte man sie zun\"{a}chst ``Radiosterne''. Erst mit der Bestimmung ihrer Rotverschiebung wurde klar, dass diese Objekte nur zum Schein stellarer Natur waren, da sie nicht mehr innerhalb der Milchstra"se liegen konnten. Danach wurden sie auch ``QSOs'', also quasi-stellar objects genannt, mehr dazu in \ref{a3}.\\
+In diesem Versuch werden die Leuchtkraftentfernung zweier Quasare berechnet und au"serdem das Ph\"{a}nomen der scheinbaren \"{U}berlichtgeschwindigkeit untersucht.
+
 
 \section{Die Leuchtkraftentfernung}
 
@@ -74,7 +82,7 @@ Eine normale Galaxie hat eine absolute Helligkeit von $-20\,$mag, bzw. $8.55\cdo
 
 Wenn die Helligkeitsschwankungen in der Gr\"{o}"senordnung eines Jahres liegt, und sich das Licht auch durch das vorhandene Medium mit etwa $c$ ausbreitet, dann ist die Gr\"{o}"se in etwa gegeben durch $x = ct$. Setzt man ein Jahr ein, so ist die emittierende Region folglich ungef\"{a}hr ein Lichtjahr gro"s (fast 63200\,AE oder gut 0.3\,pc). Eine typische Galaxie misst ca. 100000 Lichtjahre im Durchmesser, das Sonnensystem ca. 65\,AE. Die emittierende Region liegt also, was die Gr"{o}"senordnungen betrifft, zwar 6 unterhalb einer Galaxie, aber 3 oberhalb des Sonnensystems.
 
-\subsection{Aufgabe 3}
+\subsection{Aufgabe 3} \label{a3}
 
 Es ist nicht m\"{o}glich, innerhalb eines Lichtjahres durch normale Sterne eine solche Leuchtkraft zu erzeugen. Das einzige bekannte Objekt, das eine derartige Energiequelle darstellen kann, ist ein aktiver Galaxienkern (AGN). Im Zentrum befindet sich ein schwarzes Loch, eingeschlossen in einen Molek\"{u}ltorus, welcher eine Akkretionsscheibe speist. Wenn Materie auf das schwarze Loch zuf\"{a}llt, heizt sie sich auf, und gravitative Bindungsenergie wird umgesetzt in Strahlungsenergie (Radio- bis R\"{o}ntgenstrahlung). \\
 Nur 10\% der AGNs sind radiolaut; man nennt diesen Anteil der AGNs oder QSOs (quasi-stellar objects) Quasare (quasi-stellar radio source).  \\
@@ -100,9 +108,51 @@ erh\"{a}lt man eine Geschwindigkeit von v$_\text{SW}=14.438\,c$. $D_L$ wurde wie
 
 \section{Scheinbare \"{U}berlichtgeschwindigkeit}
 
-\section{Aufgabe 1}
+\subsection{Aufgabe 1}
 
-Die aus der Radiokarte gemessene Geschwindigkeit ist deutlich gr\"{o}"ser als die Lichtgeschwindigkeit. 
+Die aus der Radiokarte gemessene Geschwindigkeit ist deutlich gr\"{o}"ser als die Lichtgeschwindigkeit, sie kann somit nicht die reale Geschwindigkeit sein. 
+Der Knoten beginnt sich bei $t_1=r_0/c$ von der Hauptradioquelle zu l\"{o}sen. Bei einem Punkt A nach einer Zeit $t_0$ der Bewegung gibt es nun eine Zeitdifferenz zwischen dem Erreichen von A des Knotens und dem Zeitpunkt, zu dem der Beobachter dies mitbekommt. F\"{u}r den Beobachter kommt der Kern zur Zeit $t_2=t_0+(t_0-vt_0\cos \theta)/c$ bei Punkt A an. Dabei ist $\Delta x = vt_0\cos \theta$ die Strecke auf der Sichtlinie Beobachter-Hauptquelle. Der Beobachter misst zwischen dem Abl\"{o}sen des Kerns und dem Erreichen von A die Zeitdifferenz $\Delta t = t_2 - t_1$. Dies kann man umformen:
+\begin{align*}
+	\Delta t &= t_2 - t_1 \\
+	         &= t_0+\frac{r_0-vt_0\cos \theta}{c} - \frac{r_0}{c} \\
+	         &= t_0 - \frac{\Delta x}{c} \\
+	         &= t_0 - \frac{v}{c} t_0 \cos \theta \\
+	         &= t_0 (1-\beta \cos \theta)      
+\end{align*}
+Mit $\beta = v/c$.
+
+\subsection{Aufgabe 2}
+
+Da $v$ immer kleiner sein muss als $c$ muss $\beta \leq 1$ gelten. Es gibt allerdings eine Scheingeschwindigkeit:
+\begin{equation}
+	\beta_{\text{Schein}} = \frac{\beta \sin \theta}{1-\beta \cos \theta}
+\end{equation}
+F\"{u}r scheinbare \"{U}berlichtgeschwindigkeiten gilt also $\beta_{\text{Schein}}\geq 1$. Das bedeutet dann f\"{u}r $\beta$ und $\theta$:
+\begin{align*}
+	\frac{\beta \sin \theta}{1-\beta \cos \theta} &\geq 1 \\
+	\sin \theta + \cos \theta &\geq \frac{1}{\beta} \\
+	\beta &\geq \frac{1}{\sin \theta + \cos \theta}
+\end{align*}
+Der Minimalwert der rechten Seite ergibt sich beim Maximum des Nenners, dieses liegt bei $\theta = \pi / 4$. Dann gilt $\beta\geq 1/\sqrt{2}\approx0.707$.
+
+\subsection{Aufgabe 3}
+
+Will man f\"{u}r bestimmte Werte von $\beta$ denjenigen Winkel $\theta$ bestimmen, f\"{u}r den $\beta_{\text{Schein}}$ maximal wird, erh\"{a}lt man die Gleichung
+\begin{equation}
+	\beta_{\text{Schein, max.}} = \frac{\beta}{\sqrt{1-\beta ^2}}
+\end{equation}
+da dann $\beta = \cos \theta$ und $\sin \theta = \sqrt{1-\beta ^2}$.\\
+F\"{u}r $\beta = 0.99$ ergibt das $\beta_{\text{Schein, max.}} \approx 7$. Dieses Ergebnis liegt bereits in der Gr\"{o}"senordnung unseres Ergebnisses. Um fast exakt auf unseren gemessenen Wert als $\beta_{\text{Schein, max.}}$ zu kommen, w\"{a}re $\beta\approx0.9975$.
+
+\subsection{Aufgabe 4}
+
+Die Emission in Jets ist zwar symmetrisch, wir sehen jedoch nur den Teil, der (eher) in unsere Richtung zeigt, da Licht bei derart hohen Emissionsgeschwindigkeiten von Materie bevorzugt in die Emissionsrichtung abgegeben wird. Damit wird Licht des Jets, der vom Beobachter weg zeigt, quasi ``von uns weg'' emittiert.
+
+
+\section{Diskussion}
+
+Zun\"{a}chst wurden Leuchtkraftentfernungen von zwei Quasaren bestimmt, basierend auf einer bestimmten Kosmologie. Durch Vergleich mit Referenzwerten bekam man ein gutes Gef\"{u}hl f\"{u}r die Gr\"{o}"senordnungen. \\
+Der Versuch stellte au"serdem heraus, wie durch geometrische Betrachtung von Bewegungen am Himmel scheinbar Geschwindigkeiten entstehen k\"{o}nnen, die ein Vielfaches der Lichtgeschwindigkeit betragen und wie man diese in reale und vor allem realistische Geschwindigkeiten umrechnet. 
 
 
 
@@ -117,14 +167,5 @@ Die aus der Radiokarte gemessene Geschwindigkeit ist deutlich gr\"{o}"ser als di
 
 
 
-
-\pagebreak
-
-
-
-\begin{thebibliography}{2}
-%\bibitem{Eichler} H. J. Eichler, H.-D. Kronfeldt, J. Sahm, \textit{Das Neue Physikalische Grundpraktikum}, Springer-Verlag, Berlin-Heidelberg, 2001.
-%\bibitem{Kuchling} H. Kuchling, \textit{Taschenbuch der Physik, 21. Auflage}, Fachbuchverlag Leipzig, 2014.
-\end{thebibliography}
 
 \end{document}
