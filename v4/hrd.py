@@ -13,7 +13,7 @@ with open('hrd.dat', 'r') as csvfile:
         x1.append(float(row[1]))
 
 plt.plot(x1, y1, 'bo', label='HRD Data')
-
+plt.plot([0.65],[9.73],'ro')
 #plt.title('Altersbestimmung von Sternhaufen\nHertzsprung-Russell-Diagramm')
 plt.ylabel('Helligkeit /mag')
 plt.xlabel('B-V /mag')
