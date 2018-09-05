@@ -1,0 +1,201 @@
+\documentclass[11pt]{article}		%muss immer am Anfang stehen [Schriftgröße]{Darstellung des Dokuments}
+\usepackage[ansinew]{inputenc}		%[Kodierung]{Kodierungladen}
+
+\usepackage{amsmath}		       	%{Matheumgebungen}
+\usepackage{amsfonts}				%{Matheformeln etc.}
+\usepackage{amssymb}				%{Mathesymbole}
+
+\usepackage[ngerman]{babel}			%[neue (deutsche) Rechtschreibung]{lädt Sonderzeichen für eine Sprache}
+\usepackage[utf8]{inputenc}			%richtige Darstellung der Umlaute
+\usepackage[a4paper]{geometry}		%[Form des Pdfs (zum Drucken, etc.)]{benötigtes Unterprogramm}
+\setlength{\parindent}{0pt}			%ist zuständig dafür, dass der Text nach einem Absatz nicht eingerückt wird (wenn nicht gewollt, löschen)
+\usepackage[T1]{fontenc}			%[Schriftform]{Schriftzeichen}
+\pagestyle {}						%hiermit lässt sich eine Seitennummerierung wählen, {empty} unterbindet sie
+
+\usepackage{hyperref}               %lädt ein Programm um im Pdf Links zu erzeugen (wenn nicht gewollt, löschen)
+\usepackage{graphicx}               %Programm zum Einbinden von Graphiken
+\usepackage{pst-pdf}                %Programm zum Einbinden von Bildern
+\usepackage{here}					%zum Erzwingen der Graphikposition
+\usepackage{enumitem} 				%Aufzählungen, Listungen mit verschieden Zählzeichen
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{subfigure}				%Bilder nebeneinander
+\usepackage{rotating}				%Graphiken rotieren
+
+% Kopfzeile
+\geometry{verbose,a4paper,tmargin=35mm,bmargin=30mm,lmargin=30mm,rmargin=30mm}
+\pagestyle{fancy}
+\rhead{\today} \chead{} \lhead{Astrophysikalisches Praktikum, Versuch 3: Die Hubble-Konstante}
+\lfoot{} \cfoot{\thepage} \rfoot{}
+\sffamily
+
+\begin{document}
+% Titelseite
+\begin{titlepage}
+	\begin{center}
+		\includegraphics[scale=0.4]{2_1_GU-Logo.jpg} \\ [1cm]
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		{\Huge Astrophysikalisches Praktikum} \\
+		\bigskip
+		\rule{\textwidth}{1pt}
+		\\ [0.5cm]
+		{\Huge Versuch 3 \\ [0.5cm] Die Hubble-Konstante}
+		\\ [0.5cm]
+		\rule{\textwidth}{1pt}
+		\\ [0.5cm]
+		{\LARGE Gruppe 2: Jan Röder, Julia Lienert \\ [0.2cm] Protokollant: Julia Lienert}
+		\\ [0.5cm]
+		{\LARGE Durchgeführt am: 04.09.2018}
+		\\ [0.5cm]
+		{\LARGE Assistent: Benjamin Brückner}
+		\\ [0.5cm]
+		\rule{15cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+		\rule{15cm}{0.4pt}\\[-\baselineskip]
+		\vfill
+		\begin{flushright}
+			{\large
+				\bigskip
+				Institut f"ur Angewandte Physik \\
+				Fachbereich 13 (Physik)\\
+				Johann Wolfgang Goethe-Universit"at \\
+				Frankfurt am Main \\
+				\bigskip
+			}
+		\end{flushright}			
+	\end{center}
+\end{titlepage}
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Einleitung}
+
+
+\section{Methoden zur Entfernungsbestimmung}
+\subsection{Cepheidenmethode}
+Cepheiden sind Sterne, die ihre Helligkeit periodisch "andern. Durch Beobachtung der Periode kann "uber die Perioden-Leuchtkraft-Beziehung
+\begin{equation}
+	M = -2.81 \log\left(\frac{P}{\text{Tage}}\right) -1.43
+\end{equation}
+auf die absolute Helligkeit geschlossen werden. Zusammen mit der scheinbaren (beobachteten) Helligkeit l"asst sich der Abstand "uber das Entfernungsmodul berechnen.
+\begin{equation} \label{eq:Entfernungsmodul}
+	m - M = 5 \log\left(\frac{r}{10\,\text{pc}}\right)
+\end{equation}
+Diese Methode ist bis zu einigen Megaparsec anwendbar. Mit dem Hubble-Space-Telescope k"onnen sogar Sterne in bis zu $20 \,$Mpc Entfernung beobachtet und vermessen werden, was eine Beobachtung auch in benachbarten Galaxien m"oglich macht.
+
+\subsection{Parallaxenmethode}
+Bei dieser Methode wird die scheinbare Bewegung naher Sterne vor einem Fixsternhintergrund weit entfernter Sterne gemessen. Sie kommt dadurch zustande, dass sich die Erde im Lauf eines Jahres um die Sonne bewegt. \\
+Gemessen wird - wie in Abbildung \ref{fig:Parallaxe} zu sehen ist - der sogenannte Parallaxenwinkel. "Uber einfache Geometrie kann dann der Abstand des Sterns berechnet werden. Dazu muss der Abstand von der Erde zur Sonne bekannt sein (verwendet wird hierf"ur der mittlere Kreisbahnradius von $1 \,$AE).
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{2_2_Parallaxe.png}
+	\caption{Skizze zur Erkl"arung der Parallaxe (entnommen aus [1])}
+	\label{fig:Parallaxe}
+\end{figure}
+Entspricht der Parallaxenwinkel genau einer Bogensekunde, so wird die damit verkn"upfte Entfernung als $1 \,$pc bezeichnet. \\
+Die Parallaxenmethode kann bis etwa $5000 \,$pc verwendet werden, wenn der Winkel mit dem Hubble-Space-Telescope gemessen wird.
+
+\subsection{Supernova Typ 1a}
+Da Supernovae vom Typ 1a immer gleiche Verl"aufe ihrer Lichtkurven haben, k"onnen sie - wie die Cepheiden - als Standardkerzen verwendet werden. Durch Aufnahme der Lichtkurve und Eichung auf eine Lichtkurve bekannten Abstands l"asst sich die Entfernung bestimmen. \\
+Diese Methode hat eine Reichweite von "uber $1000 \,$Mpc, da Supernovae diesen Typs sehr leuchtkr"aftig sind.
+	
+\subsection{Kugelsternhaufen}
+Alle Sterne in Kugelsternhaufen haben in etwa die gleiche Entfernung zu uns, deshalb ist auch die Differenz zwischen scheinbarer und absoluter Helligkeit (das Entfernungsmodul, siehe Gleichung \eqref{eq:Entfernungsmodul}) gleich. \\
+Unter der Annahme, dass die Hauptreihensterne in Kugelsternhaufen im Hertzsprung-Russell-Diagramm die gleiche Kurve bilden wie die Sterne in Sonnenn"ahe, kann folgenderma"sen der Abstand zu diesen Haufen bestimmt werden: Da die Kurven "ubereinstimmen sollen, kann hieraus die absolute Helligkeit ermittelt werden. Durch Messen der scheinbaren Helligkeit kann aus dem Entfernungsmodul der Abstand des Haufens berechnet werden. \\ \\
+Es gibt auch noch eine zweite Methode, mit der man mithilfe von Kugelsternhaufen Abst"ande bestimmen kann: Die Helligkeitsverteilung eines solchen Haufens folgt einer Gau"skurve, wobei die Position des Maximums bei konstanter absoluter Helligkeit liegt. Mithilfe der scheinbaren Helligkeit kann so wieder die Entfernung bestimmt werden. Hierf"ur muss allerdings angenommen werden, dass sich der beobachtete Kugelsternhaufen genauso verh"alt wie diejenigen in der Milchstra"se. \\
+Die Reichweite dieser Methode liegt bei $50 \,$Mpc.
+
+\subsection{Tully-Fisher-Beziehung}
+Die Tully-Fisher-Relation f"ur Spiralgalaxien lautet:
+\begin{equation}
+	L \propto (v_{max})^{\beta}
+\end{equation}
+Die Leuchtkraft einer Spiralgalaxie ist somit proportional zur Potenz der maximalen Rotationsgeschwindigkeit dieser Galaxie. Die Potenz h"angt vom betrachteten Spektralbereich ab. \\
+Die Rotationsgeschwindigkeit erh"alt man aus der Verbreiterung der Spektrallinien: Diese sind verbreitert, da das Licht aus den sich auf uns zubewegenden Armen blauverschoben und das Licht aus den sich von uns wegbewegenden Armen rotverschoben ist. Je schneller sich die Galaxie dreht, umso st"arker wird dieser Effekt. \\
+Andererseits h"angt die Rotationsgeschwindigkeit einer Spiralgalaxie von deren Masse ab. Unter der Annahme, dass Galaxien mit gleicher Masse gleiche Leuchtkr"afte haben und die Leuchtkraft proportional zur Masse zunimmt, kann die absolute Helligkeit der Galaxie berechnet werden. Durch Messen der scheinbaren Helligkeit erh"alt man "uber das Entfernungsmodul wieder den Abstand der Galaxie. \\
+Angewendet werden kann diese Methode f"ur Entfernungen gr"o"ser als $100 \,$Mpc.
+
+\section{Messung der Hubble-Konstanten}
+\subsection{Aufgabe 1}
+Die Radialgeschwindigkeit ist diejenige Geschwindigkeitskomponente, die entlang der Sichtlinie des Beobachters zeigt. Gemessen werden kann sie durch Aufnahme eines Spektrums des auszumessenden Objekts. Vergleicht man die dort sichtbaren Spektrallinien mit bekannten, kann die Rotverschiebung ermittelt werden. Aus dieser erh"alt man direkt die Geschwindigkeit in radialer Richtung.
+
+\subsection{Aufgabe 2}
+Bei einer Lichtkurve wird die Leuchtkraft gegen die Zeit aufgetragen. Um diese experimentell bestimmen zu k"onnen, muss das beobachtete Objekt zu verschiedenen Zeitpunkten spektroskopisch aufgenommen werden. Die auf dem Detektor sichtbare Helligkeits"anderung kann dann graphisch dargestellt werden. \\
+Bei Cepheiden "andert sich die Leuchtkraft streng periodisch und folgt dabei der Beziehung:
+\begin{equation} \label{eq:MPRelation}
+	M_v = -1.67 \, \text{mag} - 2.54 \, \text{mag} \cdot \log(P)
+\end{equation}
+Die Entfernung eines Cepheiden l"asst sich damit folgenderma"sen berechnen: Aus der aufgenommenen Lichtkurve kann die Periode ermittelt werden, mit Gleichung \eqref{eq:MPRelation} erh"alt man die absolute Helligkeit. Durch Messen der scheinbaren Helligkeit kann dann der Abstand "uber das Entfernungsmodul \eqref{eq:Entfernungsmodul} berechnet werden.
+
+\subsection{Aufgabe 3}
+Zur Aufnahme von Lichtkurven sind Teleskope nötig, deren Auflösungsvermögen über das Rayleigh-Kriterium berechnet werden kann:
+\begin{equation}
+	\Theta_{min} = 1.22 \cdot \arcsin\left(\frac{\lambda}{d}\right)
+\end{equation}
+$\lambda$ entspricht dabei dem beobachteten Wellenlängen-Bereich und $d$ dem Durchmesser des Objektives. Der Vorfaktor ist ein Korrekturfaktor, der Beugungseffekte der Optik berücksichtigt. \\
+Die maximal erreichbare Auflösung eines $2.4 \,$m-Teleskops im Bereich des sichtbaren Lichts ($500 \,$nm) ist dann $\Theta_{min} = 2.542 \cdot 10^{-7} \, \text{rad} = (1.456 \cdot 10^{-5}) \text{°} = 52.426 \, \text{mas}$. \\
+Das Auflösungsvermögen auf der Erde verringert sich dadurch, dass die Atmosphäre bestimmte Wellenlängenbereiche (wie beispielsweise Gamma- und Röntgenstrahlung) absorbiert, sodass diese gar nicht erst beobachtet werden können. Außerdem wird der Nachthimmel aufgehellt durch Airglow, Polarlichter, Zodiakallicht, Sterne, Mond und künstliche Lichtquellen (Siedlungsgebiete), was eine Beobachtung erschwert. Zusätzlich schwächen Staub und Wasserdampf in der Luft das Licht der Sterne, die man beobachten will, ab. Das Auflösungsvermögen verringert sich auch dadurch, dass verschiedene Teile der Atmosphäre unterschiedliche Temperaturen haben, wodurch sich das Sternlicht unterschiedlich stark bricht und nicht geradlinig auf der Erde ankommt.
+
+\section{Der Virgo-Galaxienhaufen und die Hubble-Konstante}
+\subsection{Aufgabe 1}
+Aus den in der Anleitung gegebenen Lichtkurven für die Cepheiden in der Galaxie M100 kann die Periode und die mittlere scheinbare Helligkeit direkt abgelesen werden. Mithilfe der Perioden-Leuchtkraft-Beziehung \eqref{eq:MPRelation} und dem Entfernungsmodul \eqref{eq:Entfernungsmodul} können aus diesen Daten die absolute Helligkeiten und die Entfernungen berechnet werden. Die Ergebnisse sind in Tabelle \ref{tab:Cepheiden} zu sehen.
+\begin{table} [H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Cepheiden	& Periode P [Tagen]	& abs. Helligk. M [mag]	& scheinb. Helligk. m [mag]	& Abstand [Mpc]	\\ \hline
+		C1			& $53.1$			& $-6.052$						& $24.95$							& $15.864$			\\ \hline
+		C2			& $50.0$			& $-5.985$						& $25.35$							& $18.493$			\\ \hline
+		C3			& $43.2$			& $-5.824$						& $25.75$							& $20.644$			\\ \hline
+		C4			& $39.5$			& $-5.725$						& $25.45$							& $17.179$			\\ \hline
+		C5			& $30.4$			& $-5.436$						& $26.40$							& $23.292$			\\ \hline
+		C6			& $50.1$			& $-5.988$						& $26.45$							& $30.733$			\\ \hline
+		C7			& $29.5$			& $-5.403$						& $26.50$							& $24.021$			\\ \hline
+		C8			& $26.2$			& $-5.272$						& $25.80$							& $16.383$			\\ \hline
+		C9			& $28.0$			& $-5.346$						& $26.50$							& $23.399$			\\ \hline
+		C1			& $24.4$			& $-5.194$						& $25.50$							& $13.766$			\\ \hline
+		C11			& $24.0$			& $-5.176$						& $26.15$							& $18.416$			\\ \hline
+		C12			& $22.0$			& $-5.080$						& $26.30$							& $18.880$			\\ \hline
+	\end{tabular}
+	\caption{Abgelesene und berechnete Daten der Cepheiden der Galaxie M100}
+	\label{tab:Cepheiden}
+\end{table}
+Um die Entfernung der Galaxie M100 zu erhalten, wird der Mittelwert der Entfernungen der in ihr enthaltenen Cepheiden gebildet. Man erhält $r = 20.082 \,$Mpc.
+
+\subsection{Aufgabe 2}
+Die leuchtkräftigsten Cepheiden haben absolute Helligkeiten von etwa $-5 \,$mag. Da das Hubble-Space-Telescope Sterne mit bis zu $30 \,$mag scheinbarer Helligkeit noch auflösen kann, beträgt die maximale Entfernung, die über die Cepheiden-Methode bestimmt werden kann, $100 \,$Mpc (berechnet über das Entfernungsmodul).
+
+\subsection{Aufgabe 3}
+Unter der Annahme, dass die Galaxie M100 im Zentrum des Virgo-Galaxienhaufens liegt, kann mithilfe von Formel bla die Hubble-Konstante für gegebene Radialgeschwindigkeiten berechnet werden. Der Abstand $r$ zum Galaxienhaufen ist hierbei durch die Entfernung zu M100 gegeben. \\
+Es ergeben sich folgende Werte:
+\begin{enumerate}
+	\item $v_{rad} = 1179 \,$km/s: $H_0 = 58.709 \, \text{km} \, \text{s}^{-1} \, \text{Mpc}^{-1}$
+	\item $v_{rad} = 1404 \,$km/s: $H_0 = 69.913 \, \text{km} \, \text{s}^{-1} \, \text{Mpc}^{-1}$
+\end{enumerate}
+Zur Bestimmung der Hubble-Konstanten ist es in diesem Fall sinnvoll, die Radialgeschwindigkeit des Virgo-Haufens anstatt derjenigen von M100 zu benutzen, da sich vermutlich M100 innerhalb des Haufens auch noch bewegt. Deshalb ist es besser, für die Radialgeschwindigkeit ein größeres Gebiet zu betrachten.
+
+\subsection{Aufgabe 4}
+Da M100 einen viel größeren scheinbaren Durchmesser als die restlichen Spiralgalaxien im Virgo-Galaxienhaufen hat, wird davon ausgegangen, dass sie am vorderen Rand des Haufens liegt (und nicht - wie ursprünglich angenommen - im Zentrum). Damit entspricht unsere Entfernung zum Virgo-Haufen nicht der Entfernung zu M100, sondern der Summe aus der Entfernung zu M100 und dem Radius des Haufens, wenn dieser als kugelförmig angenommen wird. \\
+Zur Bestimmung des Radius wird folgendermaßen vorgegangen: Die scheinbare Größe des Virgo-Haufens beträgt $15 \,$° x $40 \,$°. Der Mittelwert dieser beiden Zahlenwerte liegt bei $\alpha = 27.5 \,$°, was dem Durchmesser des als Kugel gedachten Haufens entspricht. Der Radius wird dann über $x = d \tan(\alpha)$ ($d = 20.082 \,$Mpc ist die Entfernung zu M100) zu $x = 4.729 \,$Mpc bestimmt. Damit beträgt der neue Abstand zum Virgo-Haufen $r = d + x = 24.811 \,$Mpc. \\
+Für die Hubble-Konstante ergeben sich damit folgende Werte:
+\begin{enumerate}
+	\item $v_{rad} = 1179 \,$km/s: $H_0 = 47.519 \, \text{km} \, \text{s}^{-1} \, \text{Mpc}^{-1}$
+	\item $v_{rad} = 1404 \,$km/s: $H_0 = 56.588 \, \text{km} \, \text{s}^{-1} \, \text{Mpc}^{-1}$
+\end{enumerate}
+
+\subsection{Aufgabe 5}
+
+
+
+\section{Quellen}
+\begin{enumerate}
+	\item https://de.wikipedia.org/wiki/Parallaxe
+\end{enumerate}
+
+
+
+\end{document}
