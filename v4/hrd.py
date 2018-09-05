@@ -14,8 +14,9 @@ with open('hrd.dat', 'r') as csvfile:
 
 plt.plot(x1, y1, 'bo', label='HRD Data')
 plt.plot([0.65],[9.73],'ro')
+plt.ylim(14,2)
 #plt.title('Altersbestimmung von Sternhaufen\nHertzsprung-Russell-Diagramm')
 plt.ylabel('Helligkeit /mag')
 plt.xlabel('B-V /mag')
-plt.legend(loc=4)
+plt.legend()
 plt.show()

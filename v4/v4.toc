@@ -1,7 +1,9 @@
 \contentsline {section}{\numberline {1}Einleitung}{1}{section.1}
 \contentsline {section}{\numberline {2}Analyse eines unbekannten Sternhaufens}{1}{section.2}
 \contentsline {subsection}{\numberline {2.1}Aufgabe 1}{1}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Aufgabe 2}{1}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Aufgabe 2}{2}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Aufgabe 3}{2}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Aufgabe 3}{2}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Aufgabe 4}{2}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Aufgabe 5}{2}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Aufgabe 6}{2}{subsection.2.6}
 \contentsline {section}{\numberline {3}Hertzsprung-Russell-Diagramme}{2}{section.3}
