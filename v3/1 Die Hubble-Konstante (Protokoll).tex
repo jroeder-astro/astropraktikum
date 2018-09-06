@@ -73,7 +73,12 @@
 \pagebreak
 
 \section{Einleitung}
-
+Von Edwin Hubble wurde 1929 festgestellt, dass sich das Universum ausdehnt und sich deshalb Galaxien von uns wegbewegen. Die Radialgeschwindigkeit dieser Bewegung ist proportional zum Abstand der Galaxie, wobei der Proportionalitätsfaktor über die sogenannte Hubble-Konstante gegeben ist.
+\begin{equation} \label{eq:HubbleGesetz}
+	v_{rad} = H_0 \cdot r
+\end{equation}
+Ziel des Versuchs ist die Bestimmung der Hubble-Konstanten. Die genaue Kenntnis ihres Werts ist wichtig für die Kosmologie, da sie als Maß für Größe und Alter des Universums dient. \\
+Um ihren Wert bestimmen zu können, werden die Messdaten von Perioden und Helligkeiten von Cepheiden verwendet, da aus diesen auf ihren Abstand geschlossen werden kann. Durch zusätzliche Messung der Radialgeschwindigkeit erhält man dann einen Wert für die Hubble-Konstante.
 
 \section{Methoden zur Entfernungsbestimmung}
 \subsection{Cepheidenmethode}
@@ -170,7 +175,7 @@ Um die Entfernung der Galaxie M100 zu erhalten, wird der Mittelwert der Entfernu
 Die leuchtkräftigsten Cepheiden haben absolute Helligkeiten von etwa $-5 \,$mag. Da das Hubble-Space-Telescope Sterne mit bis zu $30 \,$mag scheinbarer Helligkeit noch auflösen kann, beträgt die maximale Entfernung, die über die Cepheiden-Methode bestimmt werden kann, $100 \,$Mpc (berechnet über das Entfernungsmodul).
 
 \subsection{Aufgabe 3}
-Unter der Annahme, dass die Galaxie M100 im Zentrum des Virgo-Galaxienhaufens liegt, kann mithilfe von Formel bla die Hubble-Konstante für gegebene Radialgeschwindigkeiten berechnet werden. Der Abstand $r$ zum Galaxienhaufen ist hierbei durch die Entfernung zu M100 gegeben. \\
+Unter der Annahme, dass die Galaxie M100 im Zentrum des Virgo-Galaxienhaufens liegt, kann mithilfe von Formel \eqref{eq:HubbleGesetz} die Hubble-Konstante für gegebene Radialgeschwindigkeiten berechnet werden. Der Abstand $r$ zum Galaxienhaufen ist hierbei durch die Entfernung zu M100 gegeben. \\
 Es ergeben sich folgende Werte:
 \begin{enumerate}
 	\item $v_{rad} = 1179 \,$km/s: $H_0 = 58.709 \, \text{km} \, \text{s}^{-1} \, \text{Mpc}^{-1}$
@@ -188,8 +193,12 @@ Für die Hubble-Konstante ergeben sich damit folgende Werte:
 \end{enumerate}
 
 \subsection{Aufgabe 5}
+Der in den obigen Aufgaben bestimmte Wert ist ein lokaler Wert der Hubble-Konstanten, da zu seiner Bestimmung lediglich die Radialgeschwindigkeit des Virgo-Galaxienhaufens verwendet wurde. Dieser kann deshalb von einem globalen Wert der Hubble-Konstanten abweichen, weil der Haufen sich nicht nur aufgrund der kosmischen Expansion bewegt sondern auch eine Eigenbewegung haben kann. Um eine globale Hubble-Konstante bestimmen zu können, müssen viele Galaxien(haufen) in genügend großer Entfernung bezüglich ihrer Radialgeschwindigkeit untersucht werden. So ist es möglich, die beiden Bewegungen (kosmische Expansion und Eigenbewegung zu trennen).
 
-
+\section{Diskussion}
+Im ersten Teil des Versuchs wurden Informationen dazu gesammelt, wie Entfernungen und Radialgeschwindigkeiten im Universum gemessen werden können, wobei vor allem auf die Cepheidenmethode näher eingegangen wurde. Im zweiten Teil des Versuchs ging es dann um die Auswertung gegebener Cepheidendaten, aus denen schlussendlich die Hubble-Konstante bestimmt werden konnte. \\
+Der Wert der Hubble-Konstanten lässt sich zwar über Gleichung \eqref{eq:HubbleGesetz} relativ leicht bestimmen, jedoch gibt es einige Unsicherheitsfaktoren bei der Messung und Bestimmung der Radialgeschwindigkeiten und der Abstände. Eine möglichst genaue Berechnung wird limitiert durch das Auflösungsvermögen der Teleskope, mit denen die Lichtkurven der Cepheiden aufgenommen werden. Außerdem entspricht die gemessene Radialgeschwindigkeit eines Objekts nicht zwangsläufig nur der kosmischen Expansion, sondern enthält Anteile einer Eigenbewegung. \\
+Um folglich einen möglichst genauen, globalen Wert der Hubble-Konstanten zu erhalten, sollten viele Objekte in großer Entfernung vermessen werden.
 
 \section{Quellen}
 \begin{enumerate}

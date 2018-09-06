@@ -6,7 +6,7 @@
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{amssymb}
-%\usepackage{ngerman}
+\usepackage{ngerman}
 \usepackage[ansinew]{inputenc}
 \usepackage[left=2cm,top=1cm]{geometry}
 
@@ -23,7 +23,7 @@
 
 \begin{document}
 	\pagestyle{empty}
-	\textasciitilde
+	
 
 \begin{titlepage}
 	\centering
@@ -42,14 +42,16 @@
 
 \section{Einleitung}
 
+Entstehen viele Sterne am selben Ort zur (fast) gleichen Zeit, resultiert das in der Entstehung eines offenen Sternhaufens. 
+
+
 \section{Analyse eines unbekannten Sternhaufens}
 
 \subsection{Aufgabe 1}
-
 \begin{figure} [h]
 	\centering
 	\includegraphics[width=1\textwidth]{hrd_notitle.eps}
-	\caption{Scheinbare Helligkeit und Farbindex gegeneinander aufgetragen}
+	\caption{Scheinbare Helligkeit und Farbindex gegeneinander aufgetragen. Der rote Punkt w\"{a}re die Sonne, w\"{a}re sie Teil des Haufens.}
 	\label{fig:hrd_unknown}
 \end{figure}
 
@@ -64,7 +66,7 @@ Die hellsten Sterne sind oft blaue Riesensterne, die eine Farbe zwischen wei"sli
 
 Der Abknickpunkt f\"{u}r $B-V\simeq -0.01$\,mag steht hier f\'{u}r ein Alter von etwa $10^8$ Jahren (Plejaden in Abb. 4.2). 
 
-\subsection{Aufgabe 4}
+\subsection{Aufgabe 4} \label{dist}
 
 Liest man in Abb. 4.2 die zum bestimmten Farbindex gehörende abolute Helligkeit ab, kann man sie zusammen mit der scheinbare Helligkeit des Abknickpunkts in das Entfernungsmodul einsetzen. Man erhält aus der Abbildung $M\simeq-0.5$\,mag.
 \begin{align*}
@@ -75,12 +77,74 @@ Liest man in Abb. 4.2 die zum bestimmten Farbindex gehörende abolute Helligkeit 
 
 \subsection{Aufgabe 5}
 
-Das Alter von $10^8$ Jahren ergibt $\log t = 8$, mithilfe von Abbildung 4.3 b) erhält man dann $\log \,T_{eff}=4.1$ (der x-Wert zum Abknickpunkt der Kurve, die zu $\log t = 8$ gehört.) Damit ist $T_{eff} \simeq 12590$\,K. Dies wiederum liefert den x-Wert zu der Kurve zum gesuchten $\log M/M_\odot$ in Abbildung 4.3 a). Man kann $\log M/M_\odot = 0.6$ ablesen, bzw. $M\simeq3.98$\,M$_\odot$.
+Das Alter von $10^8$ Jahren ergibt $\log t = 8$, mithilfe von Abbildung 4.3 b) erhält man dann $\log \,T_{eff}=4.17$ (der x-Wert zum Abknickpunkt der Kurve, die zu $\log t = 8$ gehört.) Damit ist $T_{eff} \simeq 14800$\,K. Dies wiederum liefert den x-Wert zu der Kurve zum gesuchten $\log M/M_\odot$ in Abbildung 4.3 a). Man kann $\log M/M_\odot = 0.7$ ablesen, bzw. $M\simeq5.01$\,M$_\odot$.
 
 \subsection{Aufgabe 6}
 
+Der Entfernung nach zu Urteilen handelt es sich vermutlich um die Plejaden bei $r \simeq 136$\,pc. Unser Wert ist $10$\,pc zu niedrig, gleicht jedoch den vom Hipparcos-Satelliten bestimmten $125$\,pc im Jahr 1999. \\
+Das Alter der Plejaden mit rund $100$ Jahren stimmt gut mit der Literatur \"{u}berein.
+
+
+
 
 \section{Hertzsprung-Russell-Diagramme}
+
+\subsection{Aufgabe 1}
+
+Die Sonne wird insgesamt etwa $11$\,Mrd. Jahre ein Hauptreihenstern sein. Ihr momentanes Alter betr\"{a}gt rund $4.57$\,Mrd. Jahre. \\
+Die Lebensdauer eines Sterns h\"{a}ngt im Wesentlichen von der Masse und dem Energieertrag ab. Letzterer ist die Bilanz aus der gesamten im Sterninneren produzierten Energie und der Strahlungsenergie, die abgestrahlt wird. Der Energieertrag ist somit eine erste, grobe Absch\"{a}tzung f\"{u}r die Lebensdauer. \\
+Die absolute Helligkeit der Sonne betr\"{a}gt $M=4.83$\,mag; der hellste Stern im Datensatz hat $M=-2.72$\,mag. Er ist damit wesentlich leuchtkr\"{a}ftiger als die Sonne. Au"serdem ist er wei"s-bl\"{a}ulich, w\"{a}hrend die Sonne ein gelblicher Stern ist. Der hellste Stern des Datensatzes wird deutlich weniger Zeit auf der Hauptreihe verbringen. \\
+Mit den Gleichungen 
+\begin{align}
+	\frac{L}{L_\odot} &= 10^{-0.4\,(M-M_\odot)} \label{eq:LL10MM} \\
+	L &\sim M^{7/2} \label{eq:prop}\\
+	\tau_{HR} &\sim 10^{10}\text{\,yr} \cdot \left(\frac{M}{M_\odot}\right)\left(\frac{L_\odot}{L}\right) = 10^{10}\text{\,yr} \cdot \left(\frac{L_\odot}{L}\right)^{7/2} \label{eq:time}
+\end{align}
+kann man absch\"{a}tzen, dass der hellste Stern des Datensatzes nur knapp $70$\,Mio. Jahre lang ein Hauptreihenstern ist. Bei Gleichungen \ref{eq:prop} und \ref{eq:time} ist hier zu beachten dass $M$ Massen bezeichnen. In Gleichung \ref{eq:LL10MM} ist $M$ die absolute Helligkeit. Formel \ref{eq:prop} bezeichnet man auch als Masse-Leuchtkraft-Beziehung; Formel \ref{eq:time} ermittelt eine Absch\'{a}tzung f\"{u}r die Hauptreihen-Lebensdauer basierend auf dem Wert f\"{u}r die Sonne.
+
+
+\subsection{Aufgabe 2}
+
+In Abbildung \ref{fig:hrd_unknown} ist die Sonne als roter Punkt basierend auf dem in \ref{dist} ermittelten Abstand eingetragen. Ihre scheinbare Helligkeit w\"{u}rde etwa $m_\odot\simeq 10$\,mag betragen; mit dem blo"sen Auge sind Sterne aber nur bis $m=6$\,mag sichtbar. Man k\"{o}nnte die Sonne also nicht mit dem Auge sehen, st\"{u}nde sie in dem unbekannten Sternhaufen.
+
+\subsection{Aufgabe 3} 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{hrd_twoy.eps}
+	\caption{Scheinbare und absolute Helligkeit gegen Farbindex aufgetragen}
+	\label{fig:hrd_twoy}
+\end{figure}
+
+Da alle Sterne im Haufen in etwa den gleichen Abstand zu uns haben, kann man mit dem Entfernungsmodul $m-M=const.$ annehmen und somit die rechte y-Achse generieren, indem man die linke Achse um diesen konstanten Wert (hier ca. $5.5$) nach unten verschiebt. 
+\begin{equation*}
+	m-M\simeq 5\text{\,mag} \cdot \log\left(\frac{126\text{\,pc}}{10\text{\,pc}}\right)\simeq 5.5\text{\,mag}
+\end{equation*}
+Damit ergibt sich Abbildung \ref{fig:hrd_twoy}.
+
+\subsection{Aufgabe 4}
+
+W\"{a}hlt man am Himmel per Zufall Sterne aus und tr\"{a}gt sie in ein $T$-$m$-Diagramm ein, so l\"{a}sst man au"ser Acht, wie weit sie entfernt sind. Dieses Diagramm hat somit keine charakteristische Struktur. Erst wenn man $m$ in $M$ umrechnet und ein $T$-$M$-Diagramm erstellt, sieht es aus wie ein HRD, da nun alle Helligkeiten normiert wurden. Alternativ kann man auch, wie in diesem Versuch, nur Sterne aus einem Abstand in ein $T$-$m$-Diagramm eintragen, dass dann direkt die gewohnte Struktur aufweist.
+
+
+\section{Diskussion}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
