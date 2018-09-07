@@ -3,5 +3,5 @@
 \contentsline {subsection}{\numberline {2.1}Aufgabe 1}{1}{subsection.2.1}
 \contentsline {section}{\numberline {3}Abbildungsma\active@dq \dq@prtct {s}stab}{1}{section.3}
 \contentsline {section}{\numberline {4}Abbildungsg\"{u}te}{1}{section.4}
-\contentsline {section}{\numberline {5}Astrometrie: Eigengewegung des \\ Schnelll\"{a}ufers BD +18$\mathaccentV {mathring}017{}$ 2776}{1}{section.5}
+\contentsline {section}{\numberline {5}Astrometrie: Der Schnelll\"{a}ufer BD +18$\mathaccentV {mathring}017{}$ 2776}{1}{section.5}
 \contentsline {section}{\numberline {6}Diskussion}{2}{section.6}
