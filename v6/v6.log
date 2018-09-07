@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.11)  7 SEP 2018 09:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.11)  7 SEP 2018 09:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**v4.tex
-(./v4.tex
+**v6.tex
+(./v6.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 80 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -269,7 +269,11 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/generic/german/ngerman.sty v2.5e 1998-07-08
+Package: ngerman 1998/07/08 v2.5e Support for writing german texts (br)
+\grmnU@D=\dimen123
+ngerman -- \language number for naustrian undefined, default 56 used.
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks21
 \inpenc@posthook=\toks22
@@ -282,14 +286,14 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count115
 \Gm@cntv=\count116
 \c@Gm@tempcnt=\count117
-\Gm@bindingoffset=\dimen123
-\Gm@wd@mp=\dimen124
-\Gm@odd@mp=\dimen125
-\Gm@even@mp=\dimen126
-\Gm@layoutwidth=\dimen127
-\Gm@layoutheight=\dimen128
-\Gm@layouthoffset=\dimen129
-\Gm@layoutvoffset=\dimen130
+\Gm@bindingoffset=\dimen124
+\Gm@wd@mp=\dimen125
+\Gm@odd@mp=\dimen126
+\Gm@even@mp=\dimen127
+\Gm@layoutwidth=\dimen128
+\Gm@layoutheight=\dimen129
+\Gm@layouthoffset=\dimen130
+\Gm@layoutvoffset=\dimen131
 \Gm@dimlist=\toks23
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
@@ -303,8 +307,8 @@ Package color Info: Driver file: pdftex.def on input line 143.
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/transparent.sty
 Package: transparent 2007/01/08 v1.0 Transparency via pdfTeX's color stack (HO)
 
-) (./v4.aux)
-\openout1 = `v4.aux'.
+) (./v6.aux)
+\openout1 = `v6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
@@ -324,13 +328,13 @@ LaTeX Font Info:    ... okay on input line 24.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count118
-\scratchdimen=\dimen131
+\scratchdimen=\dimen132
 \scratchbox=\box29
 \nofMPsegments=\count119
 \nofMParguments=\count120
 \everyMPshowfont=\toks24
 \MPscratchCnt=\count121
-\MPscratchDim=\dimen132
+\MPscratchDim=\dimen133
 \MPnumerator=\count122
 \makeMPintoPDFobject=\count123
 \everyMPtoPDFconversion=\toks25
@@ -364,9 +368,9 @@ LaTeX Info: Redefining \ref on input line 24.
 LaTeX Info: Redefining \pageref on input line 24.
 LaTeX Info: Redefining \nameref on input line 24.
 
-(./v4.out) (./v4.out)
+(./v6.out) (./v6.out)
 \@outlinefile=\write3
-\openout3 = `v4.out'.
+\openout3 = `v6.out'.
 
 
 *geometry* driver: auto-detecting
@@ -403,7 +407,7 @@ LaTeX Info: Redefining \nameref on input line 24.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(./v4.toc
+(./v6.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -414,94 +418,61 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write4
-\openout4 = `v4.toc'.
+\openout4 = `v6.toc'.
 
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package epstopdf Info: Source file: <hrd_notitle.eps>
-(epstopdf)                    date: 2018-09-06 11:43:10
-(epstopdf)                    size: 22414 bytes
-(epstopdf)             Output file: <hrd_notitle-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-09-07 09:11:04
-(epstopdf)                    size: 21875 bytes
-(epstopdf)             Command: <repstopdf --outfile=hrd_notitle-eps-converted-
-to.pdf hrd_notitle.eps>
-(epstopdf)             \includegraphics on input line 55.
-Package epstopdf Info: Output file is already uptodate.
 
-<hrd_notitle-eps-converted-to.pdf, id=83, 578.16pt x 433.62pt>
-File: hrd_notitle-eps-converted-to.pdf Graphic file (type pdf)
-
-<use hrd_notitle-eps-converted-to.pdf>
-Package pdftex.def Info: hrd_notitle-eps-converted-to.pdf used on input line 55
-.
-(pdftex.def)             Requested size: 465.24431pt x 348.93436pt.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 57.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 57.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.82 
-      [1] [2 <./hrd_notitle-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <hrd_twoy.eps>
-(epstopdf)                    date: 2018-09-06 11:02:51
-(epstopdf)                    size: 26904 bytes
-(epstopdf)             Output file: <hrd_twoy-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-09-06 11:21:39
-(epstopdf)                    size: 25550 bytes
-(epstopdf)             Command: <repstopdf --outfile=hrd_twoy-eps-converted-to.
-pdf hrd_twoy.eps>
-(epstopdf)             \includegraphics on input line 114.
-Package epstopdf Info: Output file is already uptodate.
-
-<hrd_twoy-eps-converted-to.pdf, id=136, 578.16pt x 433.62pt>
-File: hrd_twoy-eps-converted-to.pdf Graphic file (type pdf)
-
-<use hrd_twoy-eps-converted-to.pdf>
-Package pdftex.def Info: hrd_twoy-eps-converted-to.pdf used on input line 114.
-(pdftex.def)             Requested size: 465.24431pt x 348.93436pt.
+l.61 
+      [1]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 87.
+ [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
+ (./v6.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package rerunfilecheck Warning: File `v6.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-[3] [4 <./hrd_twoy-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
- (./v4.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
-Package rerunfilecheck Info: File `v4.out' has not changed.
-(rerunfilecheck)             Checksum: 573818D36800F6D00249B1C4E438F20D;812.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
+Package rerunfilecheck Info: Checksums for `v6.out':
+(rerunfilecheck)             Before: CE40253E46BBE761F218E4F09D853A26;394
+(rerunfilecheck)             After:  818CCCCF6D434D92B43FD6B95E60025B;398.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 87.
  ) 
 Here is how much of TeX's memory you used:
- 6762 strings out of 493038
- 97243 string characters out of 6136795
- 191222 words of memory out of 5000000
- 10187 multiletter control sequences out of 15000+600000
- 12096 words of font info for 47 fonts, out of 8000000 for 9000
+ 6869 strings out of 493038
+ 98379 string characters out of 6136795
+ 190268 words of memory out of 5000000
+ 10314 multiletter control sequences out of 15000+600000
+ 10243 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,10n,28p,573b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,5n,32p,245b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on v4.pdf (6 pages, 171995 bytes).
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on v6.pdf (3 pages, 43602 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 
