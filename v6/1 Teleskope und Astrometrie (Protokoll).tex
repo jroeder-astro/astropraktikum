@@ -1,0 +1,162 @@
+\documentclass[11pt]{article}		%muss immer am Anfang stehen [Schriftgröße]{Darstellung des Dokuments}
+\usepackage[ansinew]{inputenc}		%[Kodierung]{Kodierungladen}
+
+\usepackage{amsmath}		       	%{Matheumgebungen}
+\usepackage{amsfonts}				%{Matheformeln etc.}
+\usepackage{amssymb}				%{Mathesymbole}
+
+\usepackage[ngerman]{babel}			%[neue (deutsche) Rechtschreibung]{lädt Sonderzeichen für eine Sprache}
+\usepackage[utf8]{inputenc}			%richtige Darstellung der Umlaute
+\usepackage[a4paper]{geometry}		%[Form des Pdfs (zum Drucken, etc.)]{benötigtes Unterprogramm}
+\setlength{\parindent}{0pt}			%ist zuständig dafür, dass der Text nach einem Absatz nicht eingerückt wird (wenn nicht gewollt, löschen)
+\usepackage[T1]{fontenc}			%[Schriftform]{Schriftzeichen}
+\pagestyle {}						%hiermit lässt sich eine Seitennummerierung wählen, {empty} unterbindet sie
+
+\usepackage{hyperref}               %lädt ein Programm um im Pdf Links zu erzeugen (wenn nicht gewollt, löschen)
+\usepackage{graphicx}               %Programm zum Einbinden von Graphiken
+\usepackage{pst-pdf}                %Programm zum Einbinden von Bildern
+\usepackage{here}					%zum Erzwingen der Graphikposition
+\usepackage{enumitem} 				%Aufzählungen, Listungen mit verschieden Zählzeichen
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{subfigure}				%Bilder nebeneinander
+\usepackage{rotating}				%Graphiken rotieren
+
+% Kopfzeile
+\geometry{verbose,a4paper,tmargin=35mm,bmargin=30mm,lmargin=30mm,rmargin=30mm}
+\pagestyle{fancy}
+\rhead{\today} \chead{} \lhead{Astrophysikalisches Praktikum, Versuch 6: Teleskope und Astrometrie}
+\lfoot{} \cfoot{\thepage} \rfoot{}
+\sffamily
+
+\begin{document}
+% Titelseite
+\begin{titlepage}
+	\begin{center}
+		\includegraphics[scale=0.4]{2_1_GU-Logo.jpg} \\ [1cm]
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		{\Huge Astrophysikalisches Praktikum} \\
+		\bigskip
+		\rule{\textwidth}{1pt}
+		\\ [0.5cm]
+		{\Huge Versuch 6 \\ [0.5cm] Teleskope und Astrometrie}
+		\\ [0.5cm]
+		\rule{\textwidth}{1pt}
+		\\ [0.5cm]
+		{\LARGE Gruppe 2: Jan Röder, Julia Lienert \\ [0.2cm] Protokollant: Jan Röder}
+		\\ [0.5cm]
+		{\LARGE Durchgeführt am: 07.09.2018}
+		\\ [0.5cm]
+		{\LARGE Assistent: Dr. Mario Weigand}
+		\\ [0.5cm]
+		\rule{15cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+		\rule{15cm}{0.4pt}\\[-\baselineskip]
+		\vfill
+		\begin{flushright}
+			{\large
+				\bigskip
+				Institut für Angewandte Physik \\
+				Fachbereich 13 (Physik)\\
+				Johann Wolfgang Goethe-Universität \\
+				Frankfurt am Main \\
+				\bigskip
+			}
+		\end{flushright}			
+	\end{center}
+\end{titlepage}
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Einleitung}
+
+
+\section{Teleskope}
+
+
+\section{Abbildungsmaßstab}
+
+
+\section{Abbildungsgüte}
+
+
+\section{Astrometrie: Eigenbewegung des Schnellläufers BD +18° 2776}
+Ziel dieses Abschnitts ist es, die relative Eigenbewegung eines sich 'schnell' bewegenden Sterns zu bestimmen.
+\subsection{Aufgabe 1}
+BD +18° 2776 ist in Abbildung \ref{fig:DSS} a) derjenige Stern, der sich auf der Verbindungslinie von Stern 3 und 4 befindet und mit dem kräftigsten schwarzen Punkt markiert ist (wie durch Vergleich mit Abbildung \ref{fig:DSS} b) herausgefunden wurde). Er befindet sich im Sternbild Bärenhüter/Bootes.
+\begin{figure} [H]
+	\centering
+	\subfigure[aus dem Jahr 1954]{\includegraphics[width=0.49\linewidth]{2_2_Deep_Sky_Survey1.PNG}}
+	\subfigure[aus dem Jahr 1992]{\includegraphics[width=0.49\linewidth]{2_3_Deep_Sky_Survey2.PNG}}
+	\caption{Aufnahmen des Deep Sky Survey von der Region um BD +18° 2776 (entnommen aus [1])}
+	\label{fig:DSS}
+\end{figure}
+
+\subsection{Aufgabe 2}
+Um den Abbildungsmaßstab bestimmen zu können, wird zunächst der Abstand zwischen Stern 1 und Stern 4 auf den gegebenen Aufnahmen zu $x_m = 7.5 \,$cm bestimmt. Zur Berechnung des Abstands in Bogensekunden werden folgende Angaben benötigt:
+\begin{table} [H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Sternnummer	& Rektaszension $\alpha$	& Deklination $\delta$			\\ \hline
+		1			& 13h 45m 35.69s = 13.7599h	& +17° 44' 32.8" = 17.7424°		\\ \hline
+		4			& 13h 44m 35.38s = 13.7432h	& +17° 42' 35.4" = 17.7098°		\\ \hline
+	\end{tabular}
+	\caption{Benötigte Sterndaten zur Ermittlung des Abstands zwischen Stern 1 und 4}
+	\label{tab:Daten}
+\end{table}
+Die Differenzen der Rektaszension und der Deklination liegen damit bei: $\Delta \alpha = 0.0167 \, \text{h} \, = 0.2505 \, \text{°} \, = 901.8 \, "$ und $\Delta \delta = 0.0326 \, \text{°} \, = 117.36 \, "$. Der Mittelwert der Deklinationen beträgt $\delta_{mean} = 17.7261 \,$°. Daraus errechnet sich der Abstand zu:
+\begin{align*}
+	x_b &= \sqrt{(\Delta \alpha \cdot \cos(\delta_{mean}))^2 + (\Delta \delta)^2} \\
+	&= 859.0534 \, "
+\end{align*}
+Mit dem berechneten und dem gemessenen Abstand lässt sich der Abbildungsmaßstab ermitteln: $114.5405 \, "$/cm. \\ \\
+Die relative Eigenbewegung des Schnellläufers wird zunächst anhand Abbildung \ref{fig:DSS} abgelesen und dann mithilfe des eben berechneten Abbildungsmaßstabs umgerechnet, wobei sich die Gesamteigenbewegung $\mu$ über den Satz des Pythagoras ergibt:
+\begin{align*}
+	&\mu_{\alpha} = \frac{0.1 \, \text{cm}}{38 \, \text{yr}} = \frac{11.454 \, "}{38 \, \text{yr}} = 0.301 \, "\text{/yr} \\
+	&\mu_{\delta} = \frac{0.6 \, \text{cm}}{38 \, \text{yr}} = \frac{68.724 \, "}{38 \, \text{yr}} = 1.809 \, "\text{/yr} \\
+	&\mu = \frac{0.6083 \, \text{cm}}{38 \, \text{yr}} = \frac{69.675 \, "}{38 \, \text{yr}} = 1.834 \, "\text{/yr}
+\end{align*}
+
+\subsection{Aufgabe 3}
+Der Stern BD +18° 2776 befindet sich in $d = 10.3 \,$pc Entfernung zu uns und bewegt sich mit einer Radialgeschwindigkeit von $v_{rad} = 25 \,$km/s. Um seine Raumgeschwindigkeit ermitteln zu können, muss $\mu$ in eine Tangentialgeschwindigkeit in km/s umgerechnet werden.
+\begin{align*}
+	&x_{tan} = d \cdot \tan(\alpha) = 10.3 \, \text{pc} \, \cdot \tan\left(\frac{1.834 \, "}{3600}\right) = 9.158 \cdot 10^{-5} \, \text{pc} \\
+	&v_{tan} = 9.158 \cdot 10^{-5} \, \text{pc/yr} = 89.608 \, \text{km/s}
+\end{align*}
+Nun wird wieder über den Satz des Pythagoras die Raumgeschwindigkeit bestimmt:
+\begin{align*}
+	v = \sqrt{v_{rad}^2 + v_{tan}^2} = 93.03 \, \text{km/s}
+\end{align*}
+
+\subsection{Aufgabe 4}
+Die Radialgeschwindigkeit ist diejenige Geschwindigkeitskomponente, die entlang der Sichtlinie des Beobachters zeigt. Gemessen werden kann sie durch Aufnahme eines Spektrums des auszumessenden Objekts. Vergleicht man die dort sichtbaren Spektrallinien mit bekannten, kann die Rotverschiebung ermittelt werden. Aus dieser erhält man direkt die Geschwindigkeit in radialer Richtung.
+
+\subsection{Aufgabe 5}
+Bei der Parallaxenmethode wird die scheinbare Bewegung naher Sterne vor einem Fixsternhintergrund weit entfernter Sterne gemessen. Sie kommt dadurch zustande, dass sich die Erde im Lauf eines Jahres um die Sonne bewegt. \\
+Gemessen wird - wie in Abbildung \ref{fig:Parallaxe} zu sehen ist - der sogenannte Parallaxenwinkel. Über einfache Geometrie kann dann der Abstand des Sterns berechnet werden. Dazu muss der Abstand von der Erde zur Sonne bekannt sein (verwendet wird hierfür der mittlere Kreisbahnradius von $1 \,$AE).
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{2_4_Parallaxe.png}
+	\caption{Skizze zur Erklärung der Parallaxe (entnommen aus [2])}
+	\label{fig:Parallaxe}
+\end{figure}
+Entspricht der Parallaxenwinkel genau einer Bogensekunde, so wird die damit verknüpfte Entfernung als $1 \,$pc bezeichnet. \\
+Die Parallaxenmethode kann bis etwa $5000 \,$pc verwendet werden, wenn der Winkel mit dem Hubble-Space-Telescope gemessen wird. \\
+
+\section{Diskussion}
+
+
+\section{Quellen}
+\begin{enumerate}
+	\item Versuchsanleitung zu Versuch 6: "Teleskope und Astrometrie"
+	\item https://de.wikipedia.org/wiki/Parallaxe
+\end{enumerate}
+
+
+
+\end{document}
