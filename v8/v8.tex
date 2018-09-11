@@ -42,9 +42,78 @@
 
 \section{Einleitung}
 
+\section{Grundlagen}
+
+\subsection{Aufgabe 1}
+
+\paragraph{Erstes Gesetz.} Stellt man die Energiegleichung bzw. das Gravitationsgesetz für einen Körper mit Masse $m$ um eine zentrale Masse $M$ auf, erhält man nach Umformung einen Kegelschnitt:
+\begin{equation}
+r(\phi) = \frac{P}{1+e\cdot cos(\phi)}
+\end{equation} 
+mit dem Halbparameter $P$ und der Elliptizität $e$. Es sind somit drei Arten von Umlaufbahnen m\"{o}glich:
+\begin{align*}
+e < 1  &: \ \ \text{Ellipse}   \\
+e = 1  &: \ \ \text{Parabel}   \\
+e > 1  &: \ \ \text{Hyperbel}  
+\end{align*}
+F\"{u}r die Planetenbahnen gilt $e<1$, sie sind Ellipsenbahnen. In einem der Brennpunkte dieser Ellipsen steht jeweils die Sonne (f\"{u}r jeden Planeten).
+\paragraph{Zweites Gesetz.} Zieht man von der Sonne zu einem der Planeten einen ``Fahrstrahl'' und lässt den Planeten loslaufen, stoppt man die Zeit zu Beginn der Bewegung. Nach einem bestimmten Zeitintervall wurde vom Fahrstrahl eine Fläche aufgespannt, die direkt zur gestoppten Zeit gehört. Das bedeutet: in gleichen Zeitabschnitten werden gleiche Flächen überstrichen.
+\paragraph{Drittes Gesetz.} Die Umlaufzeit $T$ im Quadrat und die dritte Potenz der großen Halbachse $a$ stehen also für eine Planetenbahn in einem bestimmten, konstanten Verh\"{a}ltnis. 
+\begin{equation}
+\frac{T^2}{a^3} = const. = \frac{4\pi ^2}{G(M+m)}
+\end{equation}
+Dabei wird die Annahme getroffen, dass die Planetenmasse $m$ gegenüber der Sternmasse $M$ gering ist.
+
+\subsection{Aufgabe 2}
+
+Die Ekliptik ist definiert als diejenige Ebene, in der sich die Sonne in einem Jahr vor dem Fixsternhimmel scheinbar über den Himmel bewegt. \\
+Eine Planetenbahn wird charakterisiert durch die folgenden Grundgrößen: Inklination (Orientierung gegenüber dem Äquator des Koordinatensystems), Exzentrizität bzw. die Halbachsen (Form der Umlaufbahn) und die Länge des aufsteigenden Knotens (Schnittpunkt mit dem Äquator des Systems).
+
+\subsection{Aufgabe 3}
+
+Wählt man ein astronomisches Koordinatensystem zur verwendung, wird es Objekte geben, die sich relativ dazu bewegen. Dies wird als Positionsdaten mit Zetiverlauf festgehalten; diese Daten nennt man Ephemeriden. Die Ephemeriden werden in gleichen Zeitintervallen katalogisiert. 
+
+\subsection{Aufgabe 4}
+
+Um die Frage zu klären, warum Pluto nicht mehr als Planet gezählt wird, muss man die Definition eines Planeten betrachten:
+\begin{enumerate}
+	\item Ein Planet bewegt sich immer um einen zentralen Stern, nie um einen anderen Planeten.
+	\item Durch hydrostatisches Gleichgewicht und die eigene Gravitation hat das Objekt annähernd Kugelform.
+	\item Das Objekt ist massereich genug, um seine Umlaufbahn um den Stern von Asteroiden und anderen Kleinkörpern freizuräumen.
+\end{enumerate}
+Das letzte Kriterium kann Pluto aufgrund seiner geringen Masse und seines großen Orbits nicht erfüllen.
 
 
+\section{Die geozentrische Plutobahn}
 
+\subsection{Aufgabe 4}
+
+Die Eigenbewegung des Pluto erhält man mithilfe zweier Punkte, die möglichst genau ein Jahr auseinander liegen. Hier sind das:
+\begin{table} [h]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Datum	& Rektaszension $\alpha$	& Deklination $\delta$			\\ \hline
+		29.08.1979	& 13\,h 31\,m 45.0\,s		& $+$8\,° 26\,' 3.7\,"     		\\ \hline
+		23.08.1980  & 13\,h 40\,m 1.3\,s		& $+$7\,° 38\,' 42.1\,"			\\ \hline
+	\end{tabular}
+	\caption{Benötigte Sterndaten zur Ermittlung der Eigenbewegung von Pluto}
+	\label{tab:Daten}
+\end{table}
+Damit gilt $\Delta\delta=0.7893\text{\,}\mathring{}$ und $\Delta \alpha = 2.0679\text{\,}\mathring{}$. Letzteres ist die Rektaszensionsdifferenz, wenn man die Umrechnung in Grad durchführt, in dem man alle Werte mit 15\,$\mathring{{}}$ multipliziert. Dies muss nun mit $\cos \bar{\delta}$ korrigiert werden. Man erhält $\Delta\alpha=2.0476\text{\,}\mathring{}$. Die beiden Differenzen sind nun die Werte für ein Jahr, man muss also durch 12 teilen und die Werte nochmals Umrechnen, um die Eigenbewegung herauszurechnen.
+
+
+\section{Das Erde-Mond-System}
+
+\subsection{Aufgabe 1}
+
+Die Mondumlaufbahn ist keine einfache Kepler-Bahn um die Erde. Sie wird zusätzlich beeinflusst durch die gravitativen Einflüsse anderer Planeten (vor allem Jupiter) sowie der Sonne. Außerdem ist die Erde keine perfekte Kugel, was kleine Störungen in der Mondumlaufbah verursacht, da Gravitationskräfte dann nicht gleichmäßig angreifen.
+
+\subsection{Aufgabe 2}
+
+Aus den Ephemeriden der Sonne über ein Jahr kann man Zeit und ekliptikale Breite extrahieren. Gegeneinander aufgetragen erkennt man, dass die ekliptikale Breite um die 0\,$\mathring{}$ - Marke schwankt. Dies liegt an den Kräften des Mondes, ohne den die Schwankung noch viele Größenordnungen geringer wäre. Durch die periodische Mondbahn verädert sich auch die ekliptikale Breite, da sich Erde und Mond um ein gemeinsames Baryzentrum bewegen.
+
+\subsection{Aufgabe 3}
 
 
 
@@ -63,7 +132,12 @@
 \end{enumerate}
 
 
-
+%\begin{figure} [h]
+%	\centering
+%	\includegraphics[width=0.4\textwidth]{2_4_Parallaxe.png}
+%	\caption{Skizze zur Erklärung der Parallaxe (entnommen aus [2])}
+%	\label{fig:Parallaxe}
+%\end{figure}
 
 
 
