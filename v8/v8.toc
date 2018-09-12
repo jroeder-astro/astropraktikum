@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}Einleitung}{1}{section.1}
+\contentsline {section}{\numberline {2}Grundlagen}{1}{section.2}
+\contentsline {subsection}{\numberline {2.1}Aufgabe 1}{1}{subsection.2.1}
+\contentsline {paragraph}{Erstes Gesetz.}{1}{section*.2}
+\contentsline {paragraph}{Zweites Gesetz.}{1}{section*.3}
+\contentsline {paragraph}{Drittes Gesetz.}{1}{section*.4}
+\contentsline {subsection}{\numberline {2.2}Aufgabe 2}{2}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Aufgabe 3}{2}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Aufgabe 4}{2}{subsection.2.4}
+\contentsline {section}{\numberline {3}Die geozentrische Plutobahn}{2}{section.3}
+\contentsline {subsection}{\numberline {3.1}Aufgabe 1}{2}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Aufgabe 2}{2}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Aufgabe 3}{3}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Aufgabe 4}{3}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Aufgabe 5}{5}{subsection.3.5}
+\contentsline {section}{\numberline {4}Das Erde-Mond-System}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}Aufgabe 1}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Aufgabe 2}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Aufgabe 3}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Aufgabe 4}{7}{subsection.4.4}
+\contentsline {section}{\numberline {5}Diskussion}{7}{section.5}
+\contentsline {section}{\numberline {6}Quellen}{7}{section.6}

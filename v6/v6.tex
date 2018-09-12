@@ -1,0 +1,250 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{ngerman}
+\usepackage[ansinew]{inputenc}
+\usepackage[left=2cm,top=1cm]{geometry}
+
+% vector graphics test
+\usepackage{color}
+\usepackage{transparent}
+\graphicspath{{graphs/}}
+
+\setlength{\parindent}{0pt}
+
+%\usepackage[outdir=./]{epstopdf}
+%\epstopdfsetup{outdir=./}
+
+
+\begin{document}
+	\pagestyle{empty}
+	
+
+\begin{titlepage}
+	\centering
+	\bigskip
+	\huge{Astronomisches Praktikum:\\Teleskope und Astrometrie}\\
+	\bigskip
+	\large{Versuch 6}\\
+	\bigskip
+	\large{Jan R\"{o}der \& Julia Lienert}
+	\bigskip
+	\tableofcontents
+\end{titlepage}
+
+\pagebreak
+
+
+\section{Einleitung}
+
+Ziel des Versuches ist es, sich mit verschiedenen optischen Teleskopen und ihren grundlegenden Eigenschaften vertraut zu machen. es werden Fotos gestellt, die mit vorhandenem Wissen untersucht und analysiert werden sollen, um ein Gef\"{u}hl f\"{u}r praktische Astronomie zu erhalten. Haupts\"{a}chlich beleuchtet werden Abbildungsmassstab und Abbildungsg\"{u}te, auch am Beispiel eines sich schnell bewegenden Sterns. Letzteres ist eine Anwendung der Methode der Astrometrie, der direkten Beobachtung von Sternbewegungen. Fr\"{u}er war das nur mit erdgebundenen Teleskopen m\"{o}glich, die unter den St\"{o}reffekten der Erdatmosph\"{a}re litten. Heute kann man mit Weltraumteleskopen viel genauer beobachten, wenn sich auch die Konstruktionsweise der Teleskope f\"{u}r z.B. den optischen Bereich nur durch bessere Linsen- und Spiegelqualit\"{a}t sowie Bauarten zur Korrektur von Bildfehlern ver\"{a}ndert hat.
+
+\section{Teleskope}
+
+\subsection{Aufgabe 1}
+
+Jedes Teleskop, unabh\"{a}ngig davon f\"{u}r welche Wellenl\"{a}nge es konzipiert wurde, hat bestimmte Grundgr\"{o}ssen. Was das Objektiv betrifft, sind das die Brennweite (bestimmt die Baul\"{a}nge) und der Objektivdurchmesser, der die Bildhelligkeit beeinflusst. Da man weit entfernte Objekte beobachen will, ist die Vergr\"{o}sserung ebenfalls wichtig, sie ist der Quotient aus den Brennweiten der einzelnen optischen Elemente (Linsen oder Spiegel f\"{u}r optische Teleskope), zudem das Aufl\"{o}sungsverm\"{o}gen f\"{u}r die Beobachtung kleiner Objekte. Lichtst\"{a}rke und Lichtsammelverm\"{o}gen sind ebenfalls wichtig. 
+
+
+\subsection{Aufgabe 2}
+
+\paragraph{Linsenteleskop: Astrograph.} In diesem Versuch geht es vielfach um die Anwendung eines Astrographen f\"{u}r die Erstellung von Bildern von Objekten. Ein Astrograph besteht aus einem Tubus mit einem mehr oder weniger komplexen Linsensysten, je nachdem, wie viele Bildfehler korrigiert werden sollen. Letztere treten bei Linsenteleskopen (Refraktoren) vielfach auf, z.B. chromatische und sph\"{a}rische Aberration. Es sind sowohl Sammel- als auch Streulinsen vorhanden, je nach Konstruktion, mindestens aber eine Sammellinse im Objektiv und eine Streulinse im Okular. 
+\paragraph{Spiegelteleskope: Newton-Teleskop.} Ein Newton-Teleskop stellt die einfachste Bauform eines Spiegelteleskops (Reflektor) dar. Am hinteren Tubusende befindet sich der konkave Hauptspiegel, der einfallendes Licht auf einen planen Sekund\"{a}rspiegel fokussiert, der mit einer Spinne im Tubus befestigt ist. der Sekund\"{a}rspiegel ist ausserdem gekippt, sodass man in die Wand des Tubus das Okular einfassen kann. Um sph\"{a}rische Aberration zu vermeiden, verwendet man Parabolspiegel f\"{u}r den Hauptspiegel.
+\paragraph{Spiegelteleskope: Cassegrain-Teleskope.} Das Licht f\"{a}llt auch hier zun\"{a}chst auf einen Parabolhauptspiegel. Der Sekund\"{a}rspiegel ist jedoch nicht mehr plan, sondern hyperbolisch konvex und fokussiert das Licht durch ein Loch in der Mitte des Hauptspiegels. Es gibt noch weitere Varianten der Cassegrain-Teleskope, alle mit unterschiedlichen Eigenschaften. 
+
+
+\section{Abbildungsmassstab}
+
+
+\subsection{Aufgabe 1}
+
+Betrachtet man im Sternatlas das  Sternbild Leier, so kann man sehr deutlich die hellsten Sterne identifizieren. Westlichere der beiden hellsten Sterne ist Sulafat ($14\gamma$) und der \"{O}stlichere ist Sheliak ($10\beta$).
+\begin{table} [h]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Stern						& Rektaszension $\alpha$	& Deklination $\delta$			\\ \hline
+		Sulafat	($3.25$\,mag)		& 18\,h 59\,m 27.59\,s = 18.991\,h	& +32\,° 42\,' 21.8\," = 32.7061\,°		\\ \hline
+		Sheliak	($3.52$\,mag)		& 18\,h 50\,m 35.42\,s = 18.843\,h	& +33\,° 22\,' 34.8\," = 33.3763\,°		\\ \hline
+	\end{tabular}
+	\caption{Koordinaten und Helligkeiten der beiden hellsten Sterne auf der Fotoplatte}
+	\label{tab:Sterne}
+\end{table}
+Norden befindet sich demnach auf der Fotoplatte ``oben'', sodass man die Beschriftung normal aufrecht lesen kann.
+
+\subsection{Aufgabe 2}
+
+In kartesischen Koordinaten verlaufen Linien, die sich eine Koordinate teilen und deren andere Koordinate um einen konstanten Wert verschoben ist, parallel. Wechselt man nun in ein Koordinatensystem, wie hier in Polarkoordinaten, erkennt man, dass durch die Kr\"{u}ng des Systems die Parallelit\"{a}t verloren geht. Damit ist eine Koordinate abh\"{a}ngig von der anderen. Hier bedeutet das eine Abh\"{a}ngigkeit der Rektaszension von der Deklination, sodass nur am \"{A}quator $1$\,h\,$=15$\,$\mathring{}$ gilt. 
+
+\subsection{Aufgabe 3}
+
+Ohne Korrektur der Deklinationsabh\"{a}ngigkeit betr\"{a}gt die Differenz der Reaktaszensionen:
+\begin{equation*}
+	\Delta r_a = r_{a, Sulafat} - r_{a, Sheliak} = 8.8695\text{\,'} = 7982.55\text{\,"}
+\end{equation*}
+Ausserdem erh\"{a}lt man f\"{u}r Mittelwert und Differenz der Deklinationen:
+\begin{align*}
+	\bar{\delta} &\simeq 33.041\text{\,}\mathring{} \\
+	\Delta\delta &\simeq 0.67\text{\,}\mathring{}
+\end{align*}
+Der Abstand der Sterne zueinander auf der Fotoplatte betr\"{a}gt $x_m = 7$\,cm. Die Rektaszensionsdifferenz wird korrigiert durch $\Delta r_a \rightarrow \Delta r_a \cdot \cos\bar{\delta}$. Damit erh\"{a}lt man f\"{u}r die Strecke $x_b$:
+\begin{align*}
+	x_b &= \sqrt{\Delta\delta^2+(\Delta r_a \cdot \cos\delta)^2} \\
+	    &\simeq 7113.375\text{\,"}
+\end{align*}
+Mit den gemessenen 7\,cm liefert das direkt den Abbildungsmassstab $AN$:
+\begin{align*}
+	AM &= 101.62\text{\,"/mm} \\
+	AM &= 3.54\text{\,cm/\,}\mathring{}
+\end{align*}
+Die Gr\"{o}sse des Bildes betr\"{a}gt 23\,cm$\times$29\,cm (Masse der Fotoplatte), mit dem Abbildungsmassstab ergibt das 6.50\,$\mathring{}$ $\times$ 8.19\,$\mathring{}$. 
+
+\subsection{Aufgabe 4}
+
+Man kann mit $y = f\cdot\tan\theta$ die Brennweite $f$ bestimmen, wobei $y$ eine auf der Fotoplatte gemessene Strecke und $\theta$ der Winkel ist der sich nach Umrechnung mit dem Abbildungsmassstab ergibt.
+\begin{equation*}
+	f = \frac{y}{\tan\theta} = 202.9\text{\,cm} \simeq 2.03 \text{\,m}
+\end{equation*}
+Das Teleskop ist folglich ca. 2\,m lang. 
+
+\subsection{Aufgabe 5}
+
+Sonne und Mond erscheinen beide am Himmel mit etwa 5\,$\mathring{}$ Winkeldurchmesser. Mit dem Abbildungsmassstab der Fotoplatte w\"{u}rden sie also mit rund 1.77\,cm auf der Fotoplatte erscheinen.
+
+\subsection{Aufgabe 6}
+
+Der Grosse Wagen hat eine Winkelausdehnung von ca. 25\,$\mathring{}$. Damit m\"{u}sste die Fotoplatte ca. 90\,cm gross sein, um ihn ganz abzubilden.
+
+\section{Abbildungsg\"{u}te}
+
+Will man mit einem Astrografen fehlerfreie Abbildungen erstellen, so müssen diese gleichmäßig und isometrisch sein. 
+Die Sterne auf der Fotoplatte erscheinen nicht punktförmig, da ein CCD-Chip nur ein begrenztes Aufnahmevermögen verfügt. Wird lange belichtet oder ist ein Stern von sich aus sehr hell, kann es passieren, dass das Sternlicht das AUfnahmevermögen überschreitet. Das Licht aus einer Quelle wie einem Stern ist, wenn man es abbildet, annähernd gaußförmig. Reicht die Gaußglocke bis gerade an das Aufnahme-Limit, kann ein Stern noch als Punkt abgebildet werden. Fällt mehr Licht ein, wird die Gaußform ``oben abgeschnitten'' und der entstehende Querschnitt ist dann von der Form eines Kreises. Damit erscheinen einige Sterne ausgedehnt. \\
+Andere Gründe, warum Sterne uns nicht wirklich ausgedehnt erscheinen, werden nun verdeutlicht.
+
+ 
+\subsection{Aufgabe 1a}
+
+Sirius befindet sich in $0.485$\,pc Entfernung von uns. Würde sich die Sonne in dieser Entfernung befinden, hätte sie einen Winkeldurchmesser von 
+\begin{align*}
+&\tan\left(\frac{\delta}{2}\right) = \frac{d/2}{D}\\
+&\delta = 2 \, \arctan\left(\frac{d}{2D}\right)
+\end{align*}
+mit Winkeldurchmesser $\delta$, Abstand von der Erde zu Sirius $D$, und tatsächlichem Durchmesser der Sonne $d=695 \, 980$\,km. Das ergibt $\delta \simeq 9.6$\,mas bzw. $\delta \simeq 2.665\cdot 10^{-6}$\,° . Auf der Fotoplatte wären das nur $94.4$\,nm, also weit weniger als man erkennen könnte. Zudem sind die Sterne auf der Fotoplatte noch deutlich weiter entfernt als Sirius.
+
+\subsection{Aufgabe 1b}
+
+Man definiert das Auflösungsvermögen $\alpha_b$ als
+\begin{equation}
+	\alpha_b=1.2\arcsin\left(\frac{\lambda}{D}\right)
+\end{equation}
+Mit Wellenlänge $\lambda\simeq550$\,nm und Obektivdurchmesser $D=40$\,cm ergibt das $\alpha_b=9.61\cdot 10^{-5}$\,°. Auch mit einem solchen Auflösungsvermögen wäre es nicht möglich, die Sonne in einem Abstand entsprechend dem des Sirius aufzulösen. Der Sonne läge noch fast zwei Größenordnungen unter dem Auflösungsvermögen.
+
+\subsection{Aufgabe 2}
+
+Am Rand der Fotoplatte entsteht der Eindruck, die Sterndichte sei höher, dabei werden die Sterne dort nur ``dicker'' abgebildet. Dies ist ein resultat der sphärische Brennebene, die auf eine plane Fotoplatte projiziert wird und nur auf die Mitte fokussiert wird.
+
+
+
+\section{Astrometrie: der Schnellläufer BD +18° 2776}
+Ziel dieses Abschnitts ist es, die relative Eigenbewegung eines sich ``schnell'' bewegenden Sterns zu bestimmen.
+\subsection{Aufgabe 1}
+BD +18° 2776 ist in Abbildung \ref{fig:DSS} a) derjenige Stern, der sich auf der Verbindungslinie von Stern 3 und 4 befindet und mit dem kräftigsten schwarzen Punkt markiert ist (wie durch Vergleich mit Abbildung \ref{fig:DSS} b) herausgefunden wurde). Er befindet sich im Sternbild Bärenhüter/Bootes.
+\begin{figure} [h]
+	\centering
+	\subfigure[aus dem Jahr 1954]{\includegraphics[width=0.49\linewidth]{2_2_Deep_Sky_Survey1.PNG}}
+	\subfigure[aus dem Jahr 1992]{\includegraphics[width=0.49\linewidth]{2_3_Deep_Sky_Survey2.PNG}}
+	\caption{Aufnahmen des Deep Sky Survey von der Region um BD +18° 2776 (entnommen aus [1])}
+	\label{fig:DSS}
+\end{figure}
+
+\subsection{Aufgabe 2}
+Um den Abbildungsmaßstab bestimmen zu können, wird zunächst der Abstand zwischen Stern 1 und Stern 4 auf den gegebenen Aufnahmen zu $x_m = 7.5 \,$cm bestimmt. Zur Berechnung des Abstands in Bogensekunden werden folgende Angaben benötigt:
+\begin{table} [h]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Sternnummer	& Rektaszension $\alpha$	& Deklination $\delta$			\\ \hline
+		1			& 13\,h 45\,m 35.69\,s = 13.7599\,h	& +17\,° 44\,' 32.8\," = 17.7424\,°		\\ \hline
+		4			& 13\,h 44\,m 35.38\,s = 13.7432\,h	& +17\,° 42\,' 35.4\," = 17.7098\,°		\\ \hline
+	\end{tabular}
+	\caption{Benötigte Sterndaten zur Ermittlung des Abstands zwischen Stern 1 und 4}
+	\label{tab:Daten}
+\end{table}
+Die Differenzen der Rektaszension und der Deklination liegen damit bei: $\Delta \alpha = 0.0167 \, \text{h} \, = 0.2505 \, \text{°} \, = 901.8 \, "$ und $\Delta \delta = 0.0326 \, \text{°} \, = 117.36 \, "$. Der Mittelwert der Deklinationen beträgt $\delta_{mean} = 17.7261 \,$°. Daraus errechnet sich der Abstand zu:
+\begin{align*}
+x_b &= \sqrt{(\Delta \alpha \cdot \cos(\delta_{mean}))^2 + (\Delta \delta)^2} \\
+&= 859.0534 \, "
+\end{align*}
+Mit dem berechneten und dem gemessenen Abstand lässt sich der Abbildungsmaßstab ermitteln: $114.5405 \, "$/cm. \\ \\
+Die relative Eigenbewegung des Schnellläufers wird zunächst anhand Abbildung \ref{fig:DSS} abgelesen und dann mithilfe des eben berechneten Abbildungsmaßstabs umgerechnet, wobei sich die Gesamteigenbewegung $\mu$ über den Satz des Pythagoras ergibt:
+\begin{align*}
+&\mu_{\alpha} = \frac{0.1 \, \text{cm}}{38 \, \text{yr}} = \frac{11.454 \, "}{38 \, \text{yr}} = 0.301 \, "\text{/yr} \\
+&\mu_{\delta} = \frac{0.6 \, \text{cm}}{38 \, \text{yr}} = \frac{68.724 \, "}{38 \, \text{yr}} = 1.809 \, "\text{/yr} \\
+&\mu = \frac{0.6083 \, \text{cm}}{38 \, \text{yr}} = \frac{69.675 \, "}{38 \, \text{yr}} = 1.834 \, "\text{/yr}
+\end{align*}
+
+\subsection{Aufgabe 3}
+Der Stern BD +18° 2776 befindet sich in $d = 10.3 \,$pc Entfernung zu uns und bewegt sich mit einer Radialgeschwindigkeit von $v_{rad} = 25 \,$km/s. Um seine Raumgeschwindigkeit ermitteln zu können, muss $\mu$ in eine Tangentialgeschwindigkeit in km/s umgerechnet werden.
+\begin{align*}
+&x_{tan} = d \cdot \tan(\alpha) = 10.3 \, \text{pc} \, \cdot \tan\left(\frac{1.834 \, "}{3600}\right) = 9.158 \cdot 10^{-5} \, \text{pc} \\
+&v_{tan} = 9.158 \cdot 10^{-5} \, \text{pc/yr} = 89.608 \, \text{km/s}
+\end{align*}
+Nun wird wieder über den Satz des Pythagoras die Raumgeschwindigkeit bestimmt:
+\begin{align*}
+v = \sqrt{v_{rad}^2 + v_{tan}^2} = 93.03 \, \text{km/s}
+\end{align*}
+
+\subsection{Aufgabe 4}
+Die Radialgeschwindigkeit ist diejenige Geschwindigkeitskomponente, die entlang der Sichtlinie des Beobachters zeigt. Gemessen werden kann sie durch Aufnahme eines Spektrums des auszumessenden Objekts. Vergleicht man die dort sichtbaren Spektrallinien mit bekannten, kann die Rotverschiebung ermittelt werden. Aus dieser erhält man direkt die Geschwindigkeit in radialer Richtung.
+
+\subsection{Aufgabe 5}
+Bei der Parallaxenmethode wird die scheinbare Bewegung naher Sterne vor einem Fixsternhintergrund weit entfernter Sterne gemessen. Sie kommt dadurch zustande, dass sich die Erde im Lauf eines Jahres um die Sonne bewegt. \\
+Gemessen wird - wie in Abbildung \ref{fig:Parallaxe} zu sehen ist - der sogenannte Parallaxenwinkel. Über einfache Geometrie kann dann der Abstand des Sterns berechnet werden. Dazu muss der Abstand von der Erde zur Sonne bekannt sein (verwendet wird hierfür der mittlere Kreisbahnradius von $1 \,$AE).
+\begin{figure} [h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{2_4_Parallaxe.png}
+	\caption{Skizze zur Erklärung der Parallaxe (entnommen aus [2])}
+	\label{fig:Parallaxe}
+\end{figure}
+Entspricht der Parallaxenwinkel genau einer Bogensekunde, so wird die damit verknüpfte Entfernung als $1 \,$pc bezeichnet. \\
+Die Parallaxenmethode kann bis etwa $5000 \,$pc verwendet werden, wenn der Winkel mit dem Hubble-Space-Telescope gemessen wird. \\
+
+
+
+
+\section{Diskussion}
+
+Zun\"{a}chst machten wir uns mit den Arten und Funktionsweisenoptischer Teleskope vertraut, bevor wir anhand einer Fotoplatte und einem Sternatlas den Abbildungsmassstab bestimmen sollten. Dabei war die Deklinationsabh\"{a}ngigkeit der Rektaszension zur Umrechnung der Koordinaten zu beachten. Die Rektaszensionsdifferenz wurde korrigiert mit dem Cosinus der mittleren Deklination. \\
+Aus den in dieser Aufgabe ben\"{o}tigten Werten war es m\"{o}glich, die Brennweite und damit die ungef\"{a}hre Baul\"{a}nge des Teleskops zu bestimmen. \\
+Im Abschnitt \"{u}ber die Abildungsg\"{u}te wurden dann einige Gr\"{u}nde recherchiert und selbst berechnet, warum Sterne auf Fotoplatten eigentlich immer punktf\"{o}rmig erscheinen m\"{u}ssten, sie aber als ausgedehnte ``Flecken'' erscheinen. Ersteres liegt am Aufl\"{o}sungsverm\"{o}gen, letzteres am begrenzten Lichtaufnahmeverm\"{o}gen eines CCD-Chips oder einer Fotoplatte. AUsserdem wurden Bildfehler diskutiert.\\
+Zum Schluss wurden dann noch zwei Momentaufnahmen eines Sterns mit hoher Eigenbewegung analysiert. Zuerst wurde wieder der Abbildungsmassstab bestimmt, damit konnte man die Geschwindigkeiten in der projizierten Ebene berechnen, zun\"{a}chst in ''/yr. Danach wurden die Entfernung des Systems und die radialgeschwindigkeit gegeben, daraus ergab sich dann die Gesamteigenbewegung des Sterns von vast 100\,km/s. Als letztes wurden die Methoden recherchiert, mit denen man auf die beiden zuvor gegebenen Werte kommen kann (Rotverschiebung/Dopplereffekt f\"{u}r die Radialgeschwindigkeit und die Parallaxenmethode f\"{u}r den Abstand).
+
+
+
+
+
+
+
+
+\section{Quellen}
+\begin{enumerate}
+	\item Versuchsanleitung zu Versuch 6: "Teleskope und Astrometrie"
+	\item https://de.wikipedia.org/wiki/Parallaxe
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

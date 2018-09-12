@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.11)  6 SEP 2018 11:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.11)  10 SEP 2018 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**v2.tex
-(./v2.tex
+**v6.tex
+(./v6.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 80 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -269,11 +269,7 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/german/ngerman.sty v2.5e 1998-07-08
-Package: ngerman 1998/07/08 v2.5e Support for writing german texts (br)
-\grmnU@D=\dimen123
-ngerman -- \language number for naustrian undefined, default 56 used.
-) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks21
 \inpenc@posthook=\toks22
@@ -286,14 +282,14 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count115
 \Gm@cntv=\count116
 \c@Gm@tempcnt=\count117
-\Gm@bindingoffset=\dimen124
-\Gm@wd@mp=\dimen125
-\Gm@odd@mp=\dimen126
-\Gm@even@mp=\dimen127
-\Gm@layoutwidth=\dimen128
-\Gm@layoutheight=\dimen129
-\Gm@layouthoffset=\dimen130
-\Gm@layoutvoffset=\dimen131
+\Gm@bindingoffset=\dimen123
+\Gm@wd@mp=\dimen124
+\Gm@odd@mp=\dimen125
+\Gm@even@mp=\dimen126
+\Gm@layoutwidth=\dimen127
+\Gm@layoutheight=\dimen128
+\Gm@layouthoffset=\dimen129
+\Gm@layoutvoffset=\dimen130
 \Gm@dimlist=\toks23
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
@@ -307,34 +303,34 @@ Package color Info: Driver file: pdftex.def on input line 143.
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/transparent.sty
 Package: transparent 2007/01/08 v1.0 Transparency via pdfTeX's color stack (HO)
 
-) (./v2.aux)
-\openout1 = `v2.aux'.
+) (./v6.aux)
+\openout1 = `v6.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count118
-\scratchdimen=\dimen132
+\scratchdimen=\dimen131
 \scratchbox=\box29
 \nofMPsegments=\count119
 \nofMParguments=\count120
 \everyMPshowfont=\toks24
 \MPscratchCnt=\count121
-\MPscratchDim=\dimen133
+\MPscratchDim=\dimen132
 \MPnumerator=\count122
 \makeMPintoPDFobject=\count123
 \everyMPtoPDFconversion=\toks25
@@ -354,7 +350,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -364,13 +360,13 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count124
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
-LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
 
-(./v2.out) (./v2.out)
+(./v6.out) (./v6.out)
 \@outlinefile=\write3
-\openout3 = `v2.out'.
+\openout3 = `v6.out'.
 
 
 *geometry* driver: auto-detecting
@@ -407,12 +403,9 @@ LaTeX Info: Redefining \nameref on input line 22.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./v2.toc
+(./v6.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 3.
@@ -421,56 +414,103 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write4
-\openout4 = `v2.toc'.
+\openout4 = `v6.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]pdfTeX warning (ext4): dest
+ination with the same identifier (name{page.1}) has been already used, duplicat
+e ignored
 <to be read again> 
                    \relax 
-l.36 \end{titlepage}
-                     [1]pdfTeX warning (ext4): destination with the same identi
-fier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.84 
-      [1]
-Underfull \hbox (badness 10000) in paragraph at lines 87--91
+l.79 
+      [1] [2]
+Overfull \hbox (4.89249pt too wide) in paragraph at lines 125--128
+\OT1/cmr/m/n/12 Andere Gr^^?unde, warum Sterne uns nicht wirk-lich aus-gedehnt 
+er-scheinen, wer-den nun verdeut-
+ []
+
+
+Overfull \hbox (3.82887pt too wide) in paragraph at lines 136--138
+\OT1/cmr/m/n/12 mit Winkel-durchmesser $\OML/cmm/m/it/12 ^^N$\OT1/cmr/m/n/12 , 
+Ab-stand von der Erde zu Sir-ius $\OML/cmm/m/it/12 D$\OT1/cmr/m/n/12 , und tats
+^^?achlichem Durchmesser
+ []
+
+[3] <2_2_Deep_Sky_Survey1.PNG, id=151, 593.96906pt x 394.47375pt>
+File: 2_2_Deep_Sky_Survey1.PNG Graphic file (type png)
+
+<use 2_2_Deep_Sky_Survey1.PNG>
+Package pdftex.def Info: 2_2_Deep_Sky_Survey1.PNG used on input line 159.
+(pdftex.def)             Requested size: 227.97226pt x 151.40637pt.
+
+<2_3_Deep_Sky_Survey2.PNG, id=153, 591.71063pt x 389.95688pt>
+File: 2_3_Deep_Sky_Survey2.PNG Graphic file (type png)
+
+<use 2_3_Deep_Sky_Survey2.PNG>
+Package pdftex.def Info: 2_3_Deep_Sky_Survey2.PNG used on input line 160.
+(pdftex.def)             Requested size: 227.97226pt x 150.23798pt.
+ [4 <./2_2_Deep_Sky_Survey1.PNG> <./2_3_Deep_Sky_Survey2.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 182--185
 
  []
 
-[2] [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
- (./v2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
-Package rerunfilecheck Info: File `v2.out' has not changed.
-(rerunfilecheck)             Checksum: 4254D6FE802AE533ABEAEDB7D6476AF6;749.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 172.
+
+Overfull \hbox (12.52992pt too wide) in paragraph at lines 203--204
+\OT1/cmr/m/n/12 Die Ra-di-algeschwindigkeit ist diejenige Geschwindigkeit-skom-
+po-nente, die ent-lang der Sichtlinie
+ []
+
+
+Overfull \hbox (4.48787pt too wide) in paragraph at lines 203--204
+\OT1/cmr/m/n/12 kann die Rotver-schiebung er-mit-telt wer-den. Aus dieser erh^^
+?alt man di-rekt die Geschwindigkeit
+ []
+
+[5] <2_4_Parallaxe.png, id=173, 388.83296pt x 609.71451pt>
+File: 2_4_Parallaxe.png Graphic file (type png)
+
+<use 2_4_Parallaxe.png>
+Package pdftex.def Info: 2_4_Parallaxe.png used on input line 210.
+(pdftex.def)             Requested size: 186.09488pt x 291.80371pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--216
+
+ []
+
+[6 <./2_4_Parallaxe.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
+ (./v6.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
+Package rerunfilecheck Info: File `v6.out' has not changed.
+(rerunfilecheck)             Checksum: BCF60FB92578C814A605622C758E2DE3;1309.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 250.
  ) 
 Here is how much of TeX's memory you used:
- 6901 strings out of 493038
- 98750 string characters out of 6136795
- 195249 words of memory out of 5000000
- 10327 multiletter control sequences out of 15000+600000
- 12096 words of font info for 47 fonts, out of 8000000 for 9000
+ 6806 strings out of 493038
+ 97776 string characters out of 6136795
+ 193219 words of memory out of 5000000
+ 10209 multiletter control sequences out of 15000+600000
+ 14295 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,11n,28p,617b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,11n,28p,928b,389s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb>
-Output written on v2.pdf (6 pages, 121947 bytes).
+Output written on v6.pdf (8 pages, 911048 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 205 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 200 words of extra memory for PDF output out of 10000 (max. 10000000)
 
