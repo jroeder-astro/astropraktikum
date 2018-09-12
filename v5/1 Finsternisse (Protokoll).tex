@@ -1,0 +1,217 @@
+\documentclass[11pt]{article}		%muss immer am Anfang stehen [Schriftgröße]{Darstellung des Dokuments}
+\usepackage[ansinew]{inputenc}		%[Kodierung]{Kodierungladen}
+
+\usepackage{amsmath}		       	%{Matheumgebungen}
+\usepackage{amsfonts}				%{Matheformeln etc.}
+\usepackage{amssymb}				%{Mathesymbole}
+
+\usepackage[ngerman]{babel}			%[neue (deutsche) Rechtschreibung]{lädt Sonderzeichen für eine Sprache}
+\usepackage[utf8]{inputenc}			%richtige Darstellung der Umlaute
+\usepackage[a4paper]{geometry}		%[Form des Pdfs (zum Drucken, etc.)]{benötigtes Unterprogramm}
+\setlength{\parindent}{0pt}			%ist zuständig dafür, dass der Text nach einem Absatz nicht eingerückt wird (wenn nicht gewollt, löschen)
+\usepackage[T1]{fontenc}			%[Schriftform]{Schriftzeichen}
+\pagestyle {}						%hiermit lässt sich eine Seitennummerierung wählen, {empty} unterbindet sie
+
+\usepackage{hyperref}               %lädt ein Programm um im Pdf Links zu erzeugen (wenn nicht gewollt, löschen)
+\usepackage{graphicx}               %Programm zum Einbinden von Graphiken
+\usepackage{pst-pdf}                %Programm zum Einbinden von Bildern
+\usepackage{here}					%zum Erzwingen der Graphikposition
+\usepackage{enumitem} 				%Aufzählungen, Listungen mit verschieden Zählzeichen
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{subfigure}				%Bilder nebeneinander
+\usepackage{rotating}				%Graphiken rotieren
+
+% Kopfzeile
+\geometry{verbose,a4paper,tmargin=35mm,bmargin=30mm,lmargin=30mm,rmargin=30mm}
+\pagestyle{fancy}
+\rhead{\today} \chead{} \lhead{Astrophysikalisches Praktikum, Versuch 5: Finsternisse}
+\lfoot{} \cfoot{\thepage} \rfoot{}
+\sffamily
+
+\begin{document}
+% Titelseite
+\begin{titlepage}
+	\begin{center}
+		\includegraphics[scale=0.4]{2_1_GU-Logo.jpg} \\ [1cm]
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		{\Huge Astrophysikalisches Praktikum} \\
+		\bigskip
+		\rule{\textwidth}{1pt}
+		\\ [0.5cm]
+		{\Huge Versuch 5 \\ [0.5cm] Finsternisse}
+		\\ [0.5cm]
+		\rule{\textwidth}{1pt}
+		\\ [0.5cm]
+		{\LARGE Gruppe 2: Jan Röder, Julia Lienert \\ [0.2cm] Protokollant: Julia Lienert}
+		\\ [0.5cm]
+		{\LARGE Durchgeführt am: 06.09.2018}
+		\\ [0.5cm]
+		{\LARGE Assistent: Dr. Mario Weigand}
+		\\ [0.5cm]
+		\rule{15cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+		\rule{15cm}{0.4pt}\\[-\baselineskip]
+		\vfill
+		\begin{flushright}
+			{\large
+				\bigskip
+				Institut für Angewandte Physik \\
+				Fachbereich 13 (Physik)\\
+				Johann Wolfgang Goethe-Universität \\
+				Frankfurt am Main \\
+				\bigskip
+			}
+		\end{flushright}			
+	\end{center}
+\end{titlepage}
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Einleitung}
+Bei einer Sonnenfinsternis wird die Sonne von der Erde aus gesehen durch den Mond ganz oder auch nur zum Teil verdeckt. Bei einer Mondfinsternis hingegen verdunkelt sich der Mond dadurch, dass er durch den von der Sonne erzeugten Erdschatten läuft. \\
+In diesem Versuch sollen diese Finsternisse und damit einhergehend die Bewegung von Erde und Mond untersucht werden.
+
+\section{Grundlagen}
+\subsection{Aufgabe 1}
+Damit es zu einer Sonnenfinsternis kommen kann, muss sich der Mond zwischen Erde und Sonne befinden. Es muss folglich Neumond sein. Zu sehen ist dies in Abbildung \ref{fig:SoFi}. Außerdem muss noch eine weitere Bedingung erfüllt sein: Da die Bahn des Mondes gegenüber der Ekliptik geneigt ist, kann es nur dann zu einer Sonnenfinsternis kommen, wenn sich der Mond zu Neumond bei einem der beiden Schnittpunkte (Knoten) zwischen seiner Bahn und der Ekliptik befindet.
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{2_2_Sonnenfinsternis.png}
+	\caption{Nicht maßstabsgetreue Darstellung einer Sonnenfinsternis (entnommen aus [1])}
+	\label{fig:SoFi}
+\end{figure}
+Eine Mondfinsternis kommt dann zustande, wenn sich Sonne, Erde und Mond auf einer Linie befinden und der Mond den Erdschatten durchquert (siehe Abbildung \ref{fig:MoFi}). Diese können dementsprechend nur bei Vollmond vorkommen. Genau wie bei einer Sonnenfinsternis muss sich auch bei einer Mondfinsternis der Mond nahe einem der Schnittpunkte seiner Bahn mit der Ekliptik befinden.
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{2_3_Mondfinsternis.jpg}
+	\caption{Zeichnerische Darstellung einer Sonnenfinsternis (entnommen aus [2])}
+	\label{fig:MoFi}
+\end{figure}
+
+\subsection{Aufgabe 2}
+Finsternisse treten deshalb immer in je zwei Gruppen pro Jahr auf, da der Mond auf seiner Bahn zwei Mal im Jahr die Ekliptik kreuzt und dies eine der notwendigen Voraussetzungen einer Finsternis ist.
+
+\subsection{Aufgabe 3}
+Der christliche Ostersonntag ist immer der erste Sonntag nach dem ersten Vollmond nach Frühlingsbeginn. Aschermittwoch ist der Mittwoch 40 Tage vor Ostersonntag und Faschingsdienstag der Dienstag vor dem Mittwoch. Beim Zurückrechnen stellt man fest, dass an Faschingsdienstag und Aschermittwoch nie eine Mondfinsternis auftreten kann, da an diesen Tagen niemals Vollmond ist. Der größtmögliche Abstand zu Ostern, bei dem es zu Vollmond kommen kann, beträgt 35/36 Tage (29.5 Tage des Mondzyklus + 6 Tage (falls Vollmond am Montag vor Ostern ist)).
+
+\subsection{Aufgabe 4}
+Bei Finsternissen wird immer unterschieden zwischen Kernschatten- und Halbschatten-Finsternissen, je nachdem wie weit die Erde (der Mond) bei einer Sonnenfinsternis (Mondfinsternis) in den Schatten des Mondes (der Erde) eintaucht. Zu sehen sind die verschiedenen Schatten in Abbildung \ref{fig:MoFi}. \\
+Außerdem wird zwischen partiellen, totalen und ringförmigen Finsternissen unterschieden: Bei einer totalen Sonnenfinsternis taucht die Erde vollständig in den Kernschatten der Sonne ein, bei einer partiellen dagegen nur teilweise. Eine ringförmige Sonnenfinsternis unterscheidet sich dadurch von den anderen beiden, dass der Kernschatten des Mondes die Erde nicht erreicht. Dies kann passieren, wenn der Mond sich etwas weiter weg von der Erde befindet. Dann ist sein scheinbarer Durchmesser kleiner als der der Sonne, man sieht die Sonne nicht vollständig verdunkelt sondern ringförmig. \\
+Die verschiedenen Arten sind in Abbildung \ref{fig:FiArten} zu sehen. Für Mondfinsternisse gelten die Begriffe analog.
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{2_4_Finsternisarten.png}
+	\caption{Verschiedene Arten einer Sonnenfinsternis (entnommen aus [3])}
+	\label{fig:FiArten}
+\end{figure}
+
+\subsection{Aufgabe 5}
+Der Schatten, der über die Erd- bzw. Mondoberfläche wandert, wenn es zu einer Sonnen- bzw. Mondfinsternis kommt, bewegt sich von Westen nach Osten. \\
+
+\section{Die Sonnenfinsternis von 1992}
+\subsection{Aufgabe 1}
+In Abbildung \ref{fig:SoFi1992} ist der Mondschatten der Sonnenfinsternis vom 4.1.1992, die im Westen der USA zu sehen war, eingezeichnet. Der Kernschatten (Umbra) ist in dunkelgrau dargestellt, während der Halbschatten (Penumbra) nicht extra markiert wurde. Bei den Mondpositionen, bei denen der Schatten hellgrau markiert wurde, kann auf der Erde eine ringförmige Sonnenfinsternis beobachtet werden. Der Schatten heißt dann Antumbra.
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{2_4_Finsternisarten.png}
+	\caption{Schematische Darstellung des Finsternisverlaufs für Los Angeles mit eingezeichneten Mondschatten (entnommen aus [4])}
+	\label{fig:SoFi1992}
+\end{figure}
+
+\subsection{Aufgabe 2}
+Ungefähr um 13:30 Uhr beginnt die Penumbra Los Angeles zu überstreichen, die Umbra erreicht die Stadt circa 1.5 h später (um 15 Uhr). \\
+Folglich tritt Los Angeles um 13:30 Uhr in den Halbschatten des Mondes ein (partielle Halbschattenphase), befindet sich nach einiger Zeit vollständig im Halbschatten (totale Halbschattenphase), tritt dann gegen 15 Uhr in den Kernschatten ein (partielle Phase) und erreicht letztendlich Totalität (wobei der Mond die Sonne nicht vollständig verdeckt, da es sich um eine ringförmige Finsternis handelt).
+
+\subsection{Aufgabe 3}
+Die Finsternis in Los Angeles dauert in etwa 2:15 h.
+
+\subsection{Aufgabe 4}
+Nördlich von Los Angeles konnte - wie auch schon in Los Angeles - eine ringförmige Finsternis beobachtet werden. \\
+
+\section{Das rhythmische Auftreten von Finsternissen}
+\subsection{Aufgabe 1}
+In Abbildung \ref{fig:DeklMax} sind die Deklinationsmaxima des Mondes für den Monat Januar für die Jahre 1993 bis 2013 dargestellt. Man sieht, dass sie einem sinusförmigen Verlauf folgen.
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{2_6_Deklinationsmaxima.PNG}
+	\caption{Deklinationsmaxima des Mondes für den Zeitraum 1993 bis 2013}
+	\label{fig:DeklMax}
+\end{figure}
+Aus der Änderung der Deklinationsmaxima kann man ablesen, dass die Mondbahn nicht kreisförmig sondern elliptisch ist, da das Minimum der Sinuskurve in der obigen Abbildung schmaler als das Maximum ist. \\
+Die Länge der Periode beträgt in etwa 20 Jahre, was in etwa mit dem 18 Jahre dauernden Saroszyklus übereinstimmt. Man kann folglich anhand der Periode der Deklinationsmaxima erkennen, dass der Mond aufgrund der gravitativen Einflüsse von Erde, Sonne und den anderen Planeten (hauptsächlich Jupiter) präzediert und sich deshalb die Knotenlinie (gedachte Linie durch die Schnittpunkte zwischen Mondbahn und Ekliptik) dreht. Für eine ganze Drehung benötigt sie 18 Jahre.
+
+\subsection{Aufgabe 2}
+Die klassischen Parameter einer Planetenbahn (und damit auch der Mondbahn) sind die folgenden (auch zu sehen in Abbildung \ref{fig:Bahnparameter}):
+\begin{enumerate}
+	\item Inklination
+	\item Länge des aufsteigenden Knotens (Orientierung der Knotenlinie)
+	\item große und kleine Halbachse bzw. Exzentrizität
+\end{enumerate}
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{2_7_Bahnparameter.PNG}
+	\caption{Klassische Parameter einer Planetenbahn (entnommen aus [5])}
+	\label{fig:Bahnparameter}
+\end{figure}
+Die Änderung der Länge des aufsteigenden Knotens spiegelt sich in der Deklinationsvariation wider (die Perioden stimmen in etwa überein).
+
+\subsection{Aufgabe 3}
+Um bestimmen zu können, in welchem Winkelbereich der scheinbaren Mondbahn an der Himmelssphäre Sonnen- bzw. Mondfinsternisse möglich sind, werden zunächst die Grenzfälle der Finsternisse in Abbildung 5.3 der Anleitung eingezeichnet, dargestellt in Abbildung \ref{fig:FiGrenzfall}.
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{2_8_Finsternis_Grenzfall.PNG}
+	\caption{Darstellung der Grenzfälle einer Mond- bzw. Sonnenfinsternis (entnommen aus [4])}
+	\label{fig:FiGrenzfall}
+\end{figure}
+Für die nachfolgende Rechnung mit Winkel- und Längenangaben bitte handgezeichnete, extra eingereichte Skizze beachten! \\ \\
+Zu Beginn wird der Winkel $\alpha$ über
+\begin{equation*}
+	\tan(\alpha) = \frac{r_{\odot} - r_E}{d_{ES}}
+\end{equation*}
+berechnet. Es ergibt sich ein Wert von $\alpha = 0.264 \,$°. Mit diesem Winkel kann man dann wie folgt weiter rechnen:
+\begin{align*}
+	&x = \frac{r_E}{\tan(\alpha)} = 1.384 \cdot 10^6 \, \text{km} \\
+	&y = x - d_{ME} = 10^6 \, \text{km} \\
+	&z = y \cdot \tan(\alpha) = 4606.799 \, \text{km} \\
+\end{align*}
+Daraus ergibt sich für den Winkelbereich einer Mondfinsternis:
+\begin{align*}
+	&\tan(\beta) = \frac{z}{d_{ME}} \\
+	&\beta = 0.687 \, \text{°}
+\end{align*}
+Für eine Sonnenfinsternis folgt:
+\begin{align*}
+	&a = (d_{ME} + x) \tan(\alpha) = 8148.26 \, \text{km} \\
+	&\tan(\gamma) = \frac{a}{d_{ME}} \\
+	&\gamma = 1.214 \, \text{°}
+\end{align*}
+Anhand dieser Ergebnisse sieht man, dass Sonnenfinsternisse häufiger sind (etwa doppelt so häufig) als Mondfinsternisse, da der Winkelbereich für Sonnenfinsternisse größer ist. Dementsprechend ist die Wahrscheinlichkeit, dass der Mondschatten die Erdoberfläche trifft größer als die Wahrscheinlichkeit, dass der Erdschatten die Mondoberfläche trifft.
+
+\subsection{Aufgabe 4}
+Die Steigung der Serie 'Sonne im aufsteigenden Knoten' beträgt etwa 18 Tage/Jahr, während die Steigung der Sonnenfinsternisse im Januar/Februar der Sonne im absteigenden Knoten circa 10 Tage/Jahr beträgt. Dadurch, dass die Steigungen nicht gleich groß sind, liegen die Punkte der Sonnen- und Mondfinsternisse nicht alle auf einer Linie. Der Unterschied ergibt sich daraus, dass die Monate im Mittel 30 Tage haben, der Mondzyklus allerdings etwas kürzer ist. Dies ist folglich ein Kalendereffekt.
+
+\subsection{Aufgabe 5}
+Die stundengenaue Periode des Saroszyklus ist genau 18 Jahre und 11.33 Tage lang. Nach einem halben Saroszyklus sieht man immer die jeweils andere Sorte Finsternisse. Hat man beispielsweise im Jahr 2000 eine Sonnenfinsternis beobachtet, würde man im Jahr 2009 zu diesem Zeitpunkt eine Mondfinsternis sehen. Nach einem vollen Saroszyklus dagegen sind wieder die ursprünglichen Finsternisse sichtbar. Die Unterart kann sich jedoch ändern (total, partiell und ringförmig). \\
+Interessant ist folgendes: Würde man eine Sonnenfinsternis zu einem bestimmten Datum an einem bestimmten Ort beobachten, so könnte man diese nach einem vollen Saroszyklus (also 18 Jahre und 11.33 Tage später) nicht mehr sehen. Dies liegt daran, dass sich die Erde innerhalb der 8h weiter gedreht hat, die Finsternis ist dann an einem anderen Ort zu sehen. Wenn man den Ort nicht wechseln wollen würde, müsste man demnach drei volle Saroszyklen abwarten. \\
+
+\section{Diskussion}
+Zu Beginn des Versuchs sollte man sich über Finsternisse im Allgemeinen und die Arten einer Finsternis informieren, um einen ersten Überblick zu erhalten. Im zweiten Teil ging es dann um die Analyse einer ausgewählten Sonnenfinsternis, während im dritten Teil das immer wiederkehrende Verhalten von Finsternissen im Allgemeinen untersucht wurde. \\
+Nach Abschluss des Versuchs hatte man gelernt, Finsternisse zu visualisieren, und kann nun verschiedene Effekte (wie beispielsweise den Saroszyklus) erklären. Man hat gelernt, wie die Deklinationsmaxima des Mondes mit der regelmäßigen Wiederkehr der Finsternisse zusammenhängen. \\
+
+\section{Quellen}
+\begin{enumerate}
+	\item https://www.wissen.de/sonnenfinsternis-dunkle-sonne-ueber-den-usa
+	\item https://www.goruma.de/erde-und-natur/astronomie/mondfinsternis
+	\item https://www.kosmos.de/content/sonnenfinsternis/
+	\item Versuchsanleitung zu Versuch 5: "Finsternisse"
+	\item Skript "Einführung in die Astronomie 1", Kapitel 2
+\end{enumerate}
+
+
+
+\end{document}
