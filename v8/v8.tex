@@ -42,6 +42,9 @@
 
 \section{Einleitung}
 
+Um Planetenbahnen verschiedener Formen und Eigenschaften zu untersuchen, werden in diesem Versuch das System von Erde und Mond sowie die Bahn des Zwergplaneten Pluto analysiert. Zunächst werden einige Grundsatzfragen geklärt, um Planetenbahnen zu beschreiben; danach wird Plutos scheinbare Bahn am Himmel untersucht. Im dritten Aufgabenteil wendet man sich dann Erde und Mond sowie dem Zusammenhang mit der scheinbaren Bewegung der Sonne zu. Aus gegebenen Daten kann man dann noch die Masse des Mondes und das Baryzentrum des Systems bestimmen.
+
+
 \section{Grundlagen}
 
 \subsection{Aufgabe 1}
@@ -86,9 +89,33 @@ Das letzte Kriterium kann Pluto aufgrund seiner geringen Masse und seines großen
 
 \section{Die geozentrische Plutobahn}
 
+\subsection{Aufgabe 1}
+
+Die Daten kännen grafisch dargestellt werden, indem man die Rektaszensionswerte mit 15 Grad multipliziert (dies muss später mit der Deklination korrigiert werden) Das Ergebnis zeigt Bild \ref{fig:plutobahn}.
+\begin{figure} [h]
+	\centering
+	\includegraphics[width=1\textwidth]{pluto.png}
+	\caption{Darstellung der scheinbaren Plutobahn mit Deklination $\delta$ und Rektaszension $\alpha$}
+	\label{fig:plutobahn}
+\end{figure}
+
+\subsection{Aufgabe 2}
+
+Pluto bewegt sich nicht mit konstanter Geschwindigkeit: An den längeren Seiten der Ellipse ist die Bewegung schneller als an den kürzeren Seiten. Dabei ist jeder Punkt einen Monat vom nächsten Punkt entfernt (Anmerkung: links unten im Bild fehlt ein Punkt). Außerdem bewegt sich Pluto in Schleifen teils auch scheinbar rückwärtig (generell oberer Teil der Schleifen im Bild \ref{fig:opp_kon}). 
+
+\subsection{Aufgabe 3}
+
+\begin{figure} [h]
+	\centering
+	\includegraphics[width=1\textwidth]{pluto_opp_kon.png}
+	\caption{Darstellung der scheinbaren Plutobahn, mit Oppositions- und Konjunktionsbereichen}
+	\label{fig:opp_kon}
+\end{figure}
+In Bild \ref{fig:opp_kon} sind Bereiche markiert, in denen entweder eine Opposition oder eine Konjunktion zur Sonne stattfinden. 
+
 \subsection{Aufgabe 4}
 
-Die Eigenbewegung des Pluto erhält man mithilfe zweier Punkte, die möglichst genau ein Jahr auseinander liegen. Hier sind das:
+Die Eigenbewegung des Pluto erhält man mithilfe zweier Punkte, die möglichst genau ein Jahr auseinander liegen (Tabelle \ref{tab:Daten}).
 \begin{table} [h]
 	\centering
 	\begin{tabular}{|c|c|c|}
@@ -100,7 +127,46 @@ Die Eigenbewegung des Pluto erhält man mithilfe zweier Punkte, die möglichst gen
 	\caption{Benötigte Sterndaten zur Ermittlung der Eigenbewegung von Pluto}
 	\label{tab:Daten}
 \end{table}
-Damit gilt $\Delta\delta=0.7893\text{\,}\mathring{}$ und $\Delta \alpha = 2.0679\text{\,}\mathring{}$. Letzteres ist die Rektaszensionsdifferenz, wenn man die Umrechnung in Grad durchführt, in dem man alle Werte mit 15\,$\mathring{{}}$ multipliziert. Dies muss nun mit $\cos \bar{\delta}$ korrigiert werden. Man erhält $\Delta\alpha=2.0476\text{\,}\mathring{}$. Die beiden Differenzen sind nun die Werte für ein Jahr, man muss also durch 12 teilen und die Werte nochmals Umrechnen, um die Eigenbewegung herauszurechnen.
+Damit gilt $\Delta\delta=0.7893\text{\,}\mathring{}$ und $\Delta \alpha = 2.0679\text{\,}\mathring{}$. Letzteres ist die Rektaszensionsdifferenz, wenn man die Umrechnung in Grad durchführt, in dem man alle Werte mit 15\,$\mathring{{}}$ multipliziert. Dies muss nun mit $\cos \bar{\delta}$ korrigiert werden. Man erhält $\Delta\alpha=2.0476\text{\,}\mathring{}$. Die beiden Differenzen sind nun die Werte für ein Jahr, man muss also durch 12 teilen und die Werte nochmals Umrechnen, um die Eigenbewegung herauszurechnen. Dies ist dargestellt in Bild \ref{fig:ohne_eigen}.
+\begin{figure} [h]
+	\centering
+	\includegraphics[width=1\textwidth]{pluto_2.png}
+	\caption{Darstellung der scheinbaren Plutobahn, zusammen mit der Kurve, aus der Plutos Eigenbewegung herausgerechnet wurde}
+	\label{fig:ohne_eigen}
+\end{figure}
+Mithilfe der Prallaxenmethode kann man nun Plutos Abstand berechnen. Dazu liest man die Endpunkte der Parallaxensllipse (grün im Bild) ab (Tabelle \ref{tab:Parallaxenellipse}). 
+\begin{table} [h]
+	\centering
+	\begin{tabular}{|c|c|c||c|}
+		\hline
+		Punkt (in Bild)	& Rektaszension $\alpha$ & Deklination $\delta$	& Differenzen			\\ \hline
+		links			& 204.5\,°				 & 8.0\,°    			& $\Delta\delta=1.6$\,°	\\ \hline
+		rechts  		& 201.0\,°				 & 9.6\,° 	 			& $\Delta\alpha=3.5$\,°	\\ \hline
+	\end{tabular}
+	\caption{Benötigte Sterndaten zur Ermittlung der Eigenbewegung von Pluto}
+	\label{tab:Parallaxenellipse}
+\end{table}
+Für die Berechnung der großen Halbachse der Parallaxenellipse wird $\Delta\alpha$ wieder mit $\cos\bar{\delta}$ korrigiert. Es ergibt sich:
+\begin{equation*}\label{eq:pythagoras}
+	\phi = \frac{1}{2}\sqrt{(\Delta\delta)^2+ (\Delta\alpha_{corr})^2} \simeq 1.91\text{\,°}
+\end{equation*}
+Damit ist $\phi$ gleichzeitig der Winkel bei Pluto des Dreiecks Erde-Pluto-Sonne. Der Abstand berechnet sich nach
+\begin{equation*}
+	\sin\phi = \frac{1\text{\,AE}}{x_{E-P}} 
+\end{equation*}
+Mit dem eben berechneten $\phi$ erhält man $x\simeq 30.075$\,AE.
+
+\subsection{Aufgabe 5}
+Analog zu \ref{eq:pythagoras} berechnet man die jährliche Bewegung zu $\Delta x_J=2.1945$\,°. Damit wären $360\text{\,°}\simeq164.05$ Jahre. Mit dem dritten Keplergesetz 
+\begin{equation}\label{eq:Kepler3}
+	\frac{T_1^2}{T_2^2}=\frac{a_1^3}{a_2^3}
+\end{equation}
+ergibt sich für die große Halbachse von Pluto
+\begin{equation*}
+	a_P = 1\text{\,AE}\cdot \left(\frac{T_P}{1\text{\,yr}}\right)^{2/3} \simeq 29.97\text{\,AE}
+\end{equation*}
+Laut Literatur sind jedoch $a_P \simeq 39.5$\,AE und $T_P\simeq248$\,yr. Das liegt an der sehr hohen Exzentrizität von Plutos Bahn. Während man die Bahnen der acht Planeten annähernd als Kreise beschreiben kann, ist Plutos Umlaufbahn eine sehr starke Ellipse, was hier nicht einberechnet wurde. 
+
 
 
 \section{Das Erde-Mond-System}
@@ -114,6 +180,24 @@ Die Mondumlaufbahn ist keine einfache Kepler-Bahn um die Erde. Sie wird zusätzli
 Aus den Ephemeriden der Sonne über ein Jahr kann man Zeit und ekliptikale Breite extrahieren. Gegeneinander aufgetragen erkennt man, dass die ekliptikale Breite um die 0\,$\mathring{}$ - Marke schwankt. Dies liegt an den Kräften des Mondes, ohne den die Schwankung noch viele Größenordnungen geringer wäre. Durch die periodische Mondbahn verädert sich auch die ekliptikale Breite, da sich Erde und Mond um ein gemeinsames Baryzentrum bewegen.
 
 \subsection{Aufgabe 3}
+\begin{figure} [h]
+	\centering
+	\includegraphics[width=1\textwidth]{ekl_lat.png}
+	\caption{Schwankung der Ekliptik über ein Jahr}
+	\label{fig:ekl_lat}
+\end{figure}
+Bild \ref{fig:ekl_lat} zeigt, wie sich die ekliptikale Breite der Sonne über ein Jahr verändert. Die mittlere Abweichung beträgt ca. $\xi = 1.5\cdot 10^{-4}$\,°. Ferner gilt
+\begin{equation}
+	d_B\cdot\sin i = 1\text{\,AE}\cdot\tan\xi
+\end{equation}
+Mit der Inklination $i$ der Mondbahn und der Position des Baryzentrums $d_B$. Daraus ergibt sich $d_B\simeq 4280$\,km.
+
+\subsection{Aufgabe 4}
+
+Die Masse des Mondes kann man berechnen nach
+\begin{equation}
+	m_M = \frac{d_B\cdot m_E}{d_{EM}-d_B} \simeq 6.729\cdot 10^{22}\text{\,kg}
+\end{equation}
 
 
 
