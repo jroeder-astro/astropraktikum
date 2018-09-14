@@ -42,7 +42,9 @@
 
 \section{Einleitung}
 
-
+Um festzustellen, welcher Klasse eine Galaxie angeh\"{o}rt, kann man ihr Strahlungsspektrum aufnehmen und die Fl\"{u}sse und Breiten der Linien analysieren. Bildet man bestimmte Verh\"{a}ltnisse dieser Linien, lassen sie sich in die sogenannten diagnostischen Diagramme eintragen. In diesen Diagrammen entsteht dann eine bestimmte Kurve, die die aktiven von den normalen Galaxien separiert.\\
+Aktive Galaxien teilen sich wiederum auf in Untergruppen, die f\"{u}r sich spezielle charakteristische Eigenschaften haben. Grunds\"{a}tzlich unterteilt man in Seyfert-Typen, die sich phsykalisch eigentlich nur in der gemoetrischen Orientierung zu uns unterscheiden. Alle Seyfert-Galaxien zeichnen sich durch eine nicht durch Sterne erkl\"{a}rbare, auf weniger als 0.01\,pc konzentrierte Energiequelle aus. Seyfert 2-Galaxien erscheinen uns mit Linienbreiten \"{a}hnlich denen der verbotenen \"{U}berg\"{a}nge.\\
+Die ersten, die Galaxien in diagnostische Diagramme einf\"{u}gten, waren Veilleux und Osterbrock 1987. Die Separation von Galaxientypen in dieses Diagrammen liegt daran, dass Elemente in einem aktiven Galaxienkern st\"{a}rker ionisiert werden, als wenn nur Sterne als Strahlungsquelle dienen.
 
 \section{Spektrografie}
 
@@ -64,34 +66,70 @@ Eine Linie oder einen \"{U}bergang nennt man ``verboten'', wenn er im Labor nich
 
 \section{Analyse eines Galaxien-Spektrums mit IRAF}
 
-Im Datenset ist die Wellenl\"{a}nge $\lambda$ auf der x-Achse aufgetragen. 
+\begin{table} [h]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Linie	  & Wellenl\"{a}nge [\AA{}]			\\ \hline
+		[O\,III]  & 5007 \\ \hline
+	    H$\beta$  & 4861 \\ \hline
+	    H$\alpha$ & 6563 \\ \hline
+	    [N\,II]   & 6583 \\ \hline
+	    [S\,II]   & 6721 \\ \hline
+	    [O\,I]    & 6300 \\ \hline
+	\end{tabular}
+	\caption{Ruhewellenl\"{a}ngen}
+	\label{tab:lambda}
+\end{table}
 
+\subsection{Aufgabe 1}
 
+Im Datenset ist die Wellenl\"{a}nge $\lambda$ auf der x-Achse aufgetragen. Zuerst wird \textit{o1.fits} aufgerufen und die [O\,III]-Linie identifiziert, und zwar zu 5376.65\,\AA{}. Mit der Ruhewellenl\"{a}nge aus \ref{tab:lambda} sowie
+\begin{equation}
+	\frac{\lambda}{\lambda_0} = 1+z
+\end{equation}
+erh\"{a}lt man $z=0.074$. 
 
+\subsection{Aufgabe 3}
+Fittet man in jedem Spektrum die markanten Linien mit einer Gauss-Kurve und tr\"{a}gt immer den Fluss und die FWHM in eine Tabelle ein, so kann man die Logarithmen bestimmter Flussverh\"{a}ltnisse bestimmen, um die Galaxien in die vorliegenden diagnostischen Diagramme einzutragen. Da in \textit{o1.fits} keine [N\,II]-Linie vorhanden war, beginnen die Nummern bei 2. Nummer 3 fehlt ebenfalls, da zwar [O\,III] und H$\beta$ sichtbar waren, die anderen jedoch ausserhalb des gespeicherten Spektrums lagen. \\
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{figure} [h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{N2}
+	\caption{Diagnostisches Diagramm 1}
+	\label{fig:n2}
+\end{figure}
+\begin{figure} [h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{S2}
+	\caption{Diagnostisches Diagramm 2}
+	\label{fig:s2}
+\end{figure}
+\begin{figure} [h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{O1}
+	\caption{Diagnostisches Diagramm 3}
+	\label{fig:o1}
+\end{figure}
 
 \section{Diskussion}
 
+Der Versuch bestand haupts\"{a}chlich aus der Arbeit mit dem Analyseprogramm IRAF. Damit war es sehr leicht m\"{o}glich, Linien zu identifizieren und Gauss-Fits anzulegen. Danach wurden die logarithmierten Flussverh\"{a}ltnisse mit Excel berechnet und in die diagnostischen Diagramme eingetragen. Dabei fiel auf, dass Galaxie Nummer 6 anscheinend keine aktive Galaxie ist, da sie in den Diagrammen 1 und 3 deutlich linksseitig der separierenden Kurven liegt. \\
+Bei Galaxien wie Nummer 2, 5, 6 oder 8 war gut zu erkennen, dass die FWHM derjenigen der [O\,III]-Linie dehr nahe kommen und folglich vermutlich Seyfert 1-Galaxien sind.
+
+
+% o2: S1
+% o4: 
+% o5: S1
+% o6: S1
+% o7:
+% o8: S1
 
 
 
 \section{Quellen}
 \begin{enumerate}
-	\item Versuchsanleitung zu Versuch 8: "Planetenbahnen"
-	\item https://de.wikipedia.org/wiki/Parallaxe
+	\item Versuchsanleitung zu Versuch 10
 \end{enumerate}
 
 
