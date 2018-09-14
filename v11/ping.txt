@@ -1,0 +1,14 @@
+\subsection{Aufgabe 1}
+Man kann Sterne einteilen, indem man sie nach ihren Farben ordnet. 
+An dieser Einteilung in Spektralklassen kann man ausserdem ablesen, wie
+hei"s der Stern ungef\"{a}hr ist, und wie massereich er in etwa ist. So
+hat ist ein O-Stern blau, mit einer Oberfl\"{a}chentemperatur von etwa 
+40.000\,K und ca. 60\,M$_\odot$. Dagegen sind K-Sterne orange, mit nur 
+4000\,K Oberfl\"{a}chentemperatur und 0.8\,M$_\odot$. 
+
+\subsection{Aufgabe 2}
+Nimmt man mit einem Spektrografen ein Sternspektrum auf, werden 
+Absorptionslinien auftreten. Diese Linienstruktur ver\"{a}ndert sich mit 
+der Spektralklasse. Die Dicke einer Spektrallinie gibt an, wie stark das 
+Element vorhanden ist. Au"serdem k\"{o}nnen die Linien durch Dopplereffekt 
+und Photosph\"{a}rentemperatur verbreitert werden. 
