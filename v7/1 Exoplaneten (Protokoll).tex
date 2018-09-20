@@ -1,0 +1,212 @@
+\documentclass[11pt]{article}		%muss immer am Anfang stehen [Schriftgröße]{Darstellung des Dokuments}
+\usepackage[ansinew]{inputenc}		%[Kodierung]{Kodierungladen}
+
+\usepackage{amsmath}		       	%{Matheumgebungen}
+\usepackage{amsfonts}				%{Matheformeln etc.}
+\usepackage{amssymb}				%{Mathesymbole}
+
+\usepackage[ngerman]{babel}			%[neue (deutsche) Rechtschreibung]{lädt Sonderzeichen für eine Sprache}
+\usepackage[utf8]{inputenc}			%richtige Darstellung der Umlaute
+\usepackage[a4paper]{geometry}		%[Form des Pdfs (zum Drucken, etc.)]{benötigtes Unterprogramm}
+\setlength{\parindent}{0pt}			%ist zuständig dafür, dass der Text nach einem Absatz nicht eingerückt wird (wenn nicht gewollt, löschen)
+\usepackage[T1]{fontenc}			%[Schriftform]{Schriftzeichen}
+\pagestyle {}						%hiermit lässt sich eine Seitennummerierung wählen, {empty} unterbindet sie
+
+\usepackage{hyperref}               %lädt ein Programm um im Pdf Links zu erzeugen (wenn nicht gewollt, löschen)
+\usepackage{graphicx}               %Programm zum Einbinden von Graphiken
+\usepackage{pst-pdf}                %Programm zum Einbinden von Bildern
+\usepackage{here}					%zum Erzwingen der Graphikposition
+\usepackage{enumitem} 				%Aufzählungen, Listungen mit verschieden Zählzeichen
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{subfigure}				%Bilder nebeneinander
+\usepackage{rotating}				%Graphiken rotieren
+
+% Kopfzeile
+\geometry{verbose,a4paper,tmargin=35mm,bmargin=30mm,lmargin=30mm,rmargin=30mm}
+\pagestyle{fancy}
+\rhead{\today} \chead{} \lhead{Astrophysikalisches Praktikum, Versuch 7: Exoplaneten}
+\lfoot{} \cfoot{\thepage} \rfoot{}
+\sffamily
+
+\begin{document}
+% Titelseite
+\begin{titlepage}
+	\begin{center}
+		\includegraphics[scale=0.4]{2_1_GU-Logo.jpg} \\ [1cm]
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		{\Huge Astrophysikalisches Praktikum} \\
+		\bigskip
+		\rule{\textwidth}{1pt}
+		\\ [0.5cm]
+		{\Huge Versuch 7 \\ [0.5cm] Exoplaneten}
+		\\ [0.5cm]
+		\rule{\textwidth}{1pt}
+		\\ [0.5cm]
+		{\LARGE Gruppe 2: Jan Röder, Julia Lienert \\ [0.2cm] Protokoll: Julia Lienert}
+		\\ [0.5cm]
+		{\LARGE Durchgeführt am: 10.09.2018}
+		\\ [0.5cm]
+		{\LARGE Assistenten: Dr. Mario Weigand, Benjamin Brückner}
+		\\ [0.5cm]
+		\rule{15cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+		\rule{15cm}{0.4pt}\\[-\baselineskip]
+		\vfill
+		\begin{flushright}
+			{\large
+				\bigskip
+				Institut für Angewandte Physik \\
+				Fachbereich 13 (Physik)\\
+				Johann Wolfgang Goethe-Universität \\
+				Frankfurt am Main \\
+				\bigskip
+			}
+		\end{flushright}			
+	\end{center}
+\end{titlepage}
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Einleitung}
+Exoplaneten, also Planeten um andere Sterne als die Sonne, können über verschiedene Methoden - wie beispielsweise durch direkte Beobachtung oder über die Transitmethode - entdeckt werden. Es wird derzeit davon ausgegangen, dass einfachste Lebensformen auch auf dem Mars existiert haben könnten, sich höhere Lebensformen aber nur auf Exoplaneten in habitablen Zonen entwickeln können. \\
+Ziel dieses Versuches ist es, verschiedene Nachweismethoden auf ihre Verwendbarkeit und Limitierung hin zu untersuchen und sich damit zu beschäftigen, wie wahrscheinlich sich höheres Leben auf Planeten anderer Sterne entwickelt haben könnte. \\
+
+\section{Wie findet man Exoplaneten?}
+\subsection{Direkter Nachweis des reflektierten Lichts}
+Der direkte Nachweis des reflektierten Lichts von der Oberfläche eines Exoplaneten ist zwar eine naheliegende Methode, allerdings sind Planeten verglichen mit ihren Sternen sehr viel leuchtschwächer.
+\subsubsection{Aufgabe 1}
+Im optischen Bereich reflektiert Jupiter nur die Strahlung, die von der Sonne bei ihm ankommt, und sendet keine eigene Strahlung aus. Um den Faktor abschätzen zu können, um den seine Strahlung schwächer als die der Sonne ist, muss seine Albedo ($A = 0.52$) mit einem Quotienten zweier Oberflächen verrechnet werden:
+\begin{equation*}
+	A \cdot \frac{1}{2} \frac{4 \pi R_J^2}{4 \pi r^2} = 2.196 \cdot 10^{-9}
+\end{equation*}
+$R_J = 71492.68 \,$km ist dabei der Radius vom Jupiter und $r = 5.2 \,$AE seine Entfernung von der Sonne. Man sieht, dass die Strahlung von Jupiter im optischen Bereich um den Faktor $10^{-9}$ gegenüber der Strahlung der Sonne abgeschwächt ist. \\
+Da die Strahlung eines Planeten viel kleiner ist als die seines Sterns, wie man am Beispiel Jupiter-Sonne sehen kann, können Planeten nicht direkt über ihre Strahlungsleistung nachgewiesen werden, da sie von ihren Sternen überstrahlt werden. \\ \\
+Im Infrarot-Bereich hingegen sendet Jupiter zusätzlich zu der von der Sonne reflektierten Strahlung thermische Strahlung aufgrund seiner Eigentemperatur aus, was einen direkten Nachweis erleichtert. Das Verhältnis der Strahlungen liegt nun bei einem Wert von $10^{-3}$. \\
+Der Faktor im Infrarot-Bereich wurde dabei folgendermaßen bestimmt: Zuerst werden in Abbildung 7.2 der Versuchsanleitung diejenigen Schwarzkörperspektren identifiziert, die zu Sonne (mittelgrün) und Jupiter (hellgrün) gehören, indem man ihre Oberflächentemperaturen den Temperaturen der Kurven zuordnet. Danach werden die jeweiligen Werte der beiden Kurven im Infrarot-Bereich abgelesen und durcheinander geteilt. \\ \\
+Schwierig ist die direkte Beobachtung eines Exoplaneten nicht nur deshalb, weil dieser von seinem Stern 'überstrahlt' wird, sondern auch, weil der aus großer Entfernung sehr kleine Abstand zwischen Planet und Stern noch auflösbar sein muss. Der Winkelabstand zwischen Jupiter und Sonne, sofern diese sich in einer Entfernung von $d_1 = 1 \,$pc bzw. $d_2 = 5 \,$pc befinden, berechnet sich zu ($x = 5.2 \,$AE ist der Abstand zwischen Jupiter und Sonne):
+\begin{align*}
+	&\tan(\alpha) = \frac{x}{d} \\
+	&\alpha_1 = (1.44 \cdot 10^{-3}) \, \text{°} = 5.2 \, " \, \text{(für d}_1) \\
+	&\alpha_2 = (2.89 \cdot 10^{-4}) \, \text{°} = 1.04 \, " \, \text{(für d}_2) \\
+\end{align*}
+\subsubsection{Aufgabe 2}
+Unter der Annahme, dass man die Sonne perfekt abblenden kann, soll bestimmt werden, inwieweit Jupiter mit den heutigen technischen Möglichkeiten noch direkt nachweisbar wäre. Limitiert wird die Nachweisbarkeit durch die Grenzhelligkeit von $m = 30 \,$mag, die das Hubble-Space-Telescope gerade noch auflösen kann. \\
+Jupiter hat eine scheinbare Helligkeit von $m_J = -2.4 \,$mag, wenn er in Opposition steht. Der Abstand zwischen Erde und Jupiter beträgt in diesem Fall $d_{EJ} = 588.5 \cdot 10^6 \,$km. Mit diesen beiden Werten kann die absolute Helligkeit von Jupiter über das Entfernungsmodul berechnet werden:
+\begin{equation*}
+	M = m_J - 5 \, \text{mag} \, \cdot \log\left(\frac{d_{EJ}}{10 \, \text{pc}}\right) = 26.198 \, \text{mag}
+\end{equation*}
+Mit diesem Wert und der Grenzhelligkeit des HST lässt sich die maximale Entfernung berechnen, in der Jupiter noch direkt nachweisbar wäre:
+\begin{equation*}
+	r = 10 \, \text{pc} \, \cdot 10^{\frac{m-M}{5 \, \text{mag}}} = 57.59 \, \text{pc}
+\end{equation*}
+Vergleicht man das Ergebnis mit dem Durchmesser der Milchstraße ($d = (52 - 61) \cdot 10^3 \, \text{pc}$), stellt man fest, dass selbst bei perfekter Abblendung des Sterns Planeten nur bei sehr nahen Sternen mit unseren heutigen technischen Möglichkeiten noch direkt nachweisbar sind. Für weitere entfernte Sterne und erst recht für solche außerhalb der Milchstraße müssen demnach andere Nachweismethoden verwendet werden. \\
+Ohne die Einschränkung der Auflösung durch die Grenzhelligkeit und nur mit der Limitierung durch den Spiegeldurchmesser ($D = 2.4 \,$m) kann das HST allerdings viel weiter schauen. Sein Auflösungsvermögen im sichtbaren Bereich ($\lambda = 550 \,$nm) berechnet sich zu:
+\begin{equation*}
+	\alpha = 1.22 \cdot \arcsin\left(\frac{\lambda}{D}\right) = (1.601 \cdot 10^{-5}) \, \text{°} = 0.058 \, "
+\end{equation*}
+Daraus ergibt sich (wobei $x$ wieder dem Abstand Jupiter-Sonne entspricht):
+\begin{equation*}
+	d = \frac{x}{\tan(\alpha)} = 18.599 \cdot 10^6 \, \text{AE} = 90.17 \, \text{pc}
+\end{equation*}
+Das HST kann folglich den Abstand zwischen Sonne und Jupiter noch in circa $90000 \,$pc optisch auflösen.
+
+\subsection{Transitmethode}
+Bei der Transitmethode werden Exoplaneten dadurch detektiert, dass man den Helligkeitsabfall in der Lichtkurve des Sterns misst, wenn der Planet vor seinem Stern vorbeiwandert. Mithilfe des Weltraumteleskops Kepler konnten so auch schon einige Exoplaneten, die sogar erdähnlich waren, gefunden werden.
+\subsubsection{Aufgabe 3}
+Um erdähnliche Planeten mit der Transitmethode finden zu können ist eine hohe Präzision bei der Messung der Lichtkurven nötig. Dies kann man sich verdeutlichen, indem man den Helligkeitsabfall der Sonne betrachtet, wenn Erde/Jupiter an ihr vorbei laufen:
+\begin{align*}
+	&\text{allgemeine Rechnung: } \frac{4 \pi R^2}{4 \pi R_{\odot}^2} = \frac{R^2}{R_{\odot}^2} \\
+	&\text{Erde: } 8.39 \cdot 10^{-5} \\
+	&\text{Jupiter: } 1.05 \cdot 10^{-2}
+\end{align*}
+Für die obige Rechnung verwendet wurden folgende Radien:
+\begin{enumerate}
+	\item Sonne: $R_{\odot} = 696342 \,$km
+	\item Erde: $R_E = 6378.15 \,$km
+	\item Jupiter: $R_J = 71492.68 \,$km
+\end{enumerate}
+Man sieht, dass zur Beobachtung erdähnlicher Planeten Helligkeitsabfälle mit einer Präzision von $10^{-5}$ noch auflösbar sein müssen. \\ \\
+Erdähnliche Planeten um einen größeren Stern mit beispielsweise 10 Sonnenradien zu finden, setzt eine noch genauere Messung voraus, da das Verhältnis aus Planetenradius zu Sternradius noch kleiner ist. \\ \\
+Bei der Beobachtung von 190000 Sternen hat Kepler 2500 Planetensysteme gefunden. Da es in der Galaxis circa 100 bis 300 Milliarden Sterne gibt, müsste es in der Milchstraße $1.32 - 3.95 \cdot 10^9$ potentielle Planetensysteme geben. \\ \\
+Die beobachtete Anzahl an Planetensystemen stellt nur eine Untergrenze dar, da mithilfe der Transitmethode Planeten nur dann detektiert werden können, wenn sie vor ihrem Stern vorbei laufen. Geht man davon aus, dass die Planetensysteme zufällig zu uns orientiert sind, so können all diejenigen Planeten nicht entdeckt werden, die ihren Stern so umkreisen, dass sie von uns aus gesehen nicht an ihm vorbei laufen (wir schauen dann quasi von oben auf das System).
+
+\subsection{Astrometrie}
+Kreist ein Planet um einen Stern, so bleibt ihr gemeinsamer Schwerpunkt in Ruhe. Der Stern selbst bewegt sich allerdings als Folge der Bahnbewegung des Planeten um den Schwerpunkt herum. Diese Bewegung kann detektiert werden und ist somit eine weitere Nachweismethode für Exoplaneten.
+\subsubsection{Aufgabe 4}
+Der Schwerpunkt des Systems Sonne-Jupiter berechnet sich über ihre Massen und Abstände wie folgt (der Nullpunkt des gedachten Koordinatensystems liegt dabei bei der Sonne):
+\begin{align*}
+	&M_{\odot} = 1.98892 \cdot 10^{30} \, \text{kg} \qquad M_J = 1.899 \cdot 10^{27} \, \text{kg} \qquad x_{\odot} = 0 \qquad x_J = 5.2 \, \text{AE} \\
+	&x_S = \frac{x_J M_J + x_{\odot} M_{\odot}}{M_J + M_{\odot}} = \frac{x_J M_J}{M_J + M_{\odot}} = 7.42 \cdot 10^5 \, \text{km}
+\end{align*}
+Er liegt folglich nicht weit außerhalb der Sonne. Diese kreist immer um ihn herum, sie bewegt sich also aus $1 \,$pc Entfernung gesehen um die Distanz $2x_S$ in der Zeit eines Jupiterumlaufs hin und her. Diese Strecke rechnet sich über
+\begin{equation*}
+	\tan(\alpha) = \frac{2x_S}{1 \, \text{pc}}
+\end{equation*}
+in einen Winkel von $9.92 \,$mas um. Da Sterne auf Aufnahmen erdgebundener Teleskope ohne adaptive Optik typische Durchmesser von einer Bogensekunde haben, ist die Bewegung eines Sterns um den Schwerpunkt herum nicht leicht messbar.
+
+\subsection{Radialgeschwindigkeitseffekte}
+Durch die Bewegung eines Planeten um seinen Stern herum ändert sich auch die Radialgeschwindigkeit des Sterns. Auch die Messung dieser Änderung ist eine Nachweismethode für Exoplaneten.
+\subsubsection{Aufgabe 5}
+Die Radialgeschwindigkeit der Sonne durch die Bewegung des Jupiter beträgt bei einer Umlaufperiode von 11 Jahren:
+\begin{equation*}
+	v_{rad} = \frac{2 \pi x_S}{11 \, \text{yr}} = 13.44 \, \text{m/s}
+\end{equation*}
+
+\subsubsection{Aufgabe 6}
+In dieser Aufgabe wird anhand von Messungen der Flussänderung und der Radialgeschwindigkeit des Sterns Corot-7 der ihn umkreisende Planet Corot-7b untersucht. Er wurde im Jahr 2009 mit dem Corot-Satelliten entdeckt. Die Parameter des Systems sind:
+\begin{enumerate}
+	\item  Abstand des Systems zu uns: $490 \,$Lichtjahre
+	\item Radius des Sterns: $R_* = 0.87 \, R_{\odot}$
+	\item Masse des Sterns: $M_* = 0.93 \, M_{\odot}$
+	\item Periode des Planetenumlaufs: $P = 0.8535 \,$Tage
+\end{enumerate}
+Läuft Corot-7b an seinem Stern vorbei, so ändert sich der Fluss um den Wert $0.34 \cdot 10^{-3}$ (abgelesen aus Abbildung 7.4 in der Versuchsanleitung). Daraus ergibt sich der Radius des Planeten zu:
+\begin{equation*}
+	R_P = \sqrt{0.34 \cdot 10^{-3}} \cdot R_* = 11170.72 \, \text{km} = 1.75 R_E
+\end{equation*}
+Mithilfe der Umlaufperiode und der Masse von Corot-7 kann die große Halbachse der Planetenbahn über das dritte Kepler'sche Gesetz berechnet werden, wobei angenommen wird, dass die Masse von Corot-7b verglichen mit der Masse seines Sterns vernachlässigbar ist.
+\begin{equation*}
+	a = \sqrt[3]{\frac{GM_*P^2}{4 \pi^2}} = 2.57 \cdot 10^9 \, \text{m}
+\end{equation*}
+Merkur hat im Vergleich dazu eine Halbachse von $57.909 \cdot 10^9 \,$m. \\
+Aus Abbildung 7.4 der Versuchsanleitung liest man eine Radialgeschwindigkeit von $v_{rad} = \pm 4 \,$m/s für Corot-7 ab. Daraus kann man die Masse (und die Dichte) von Corot-7b berechnen, indem man umgekehrt wie in Aufgabe 4 und 5 vorgeht:
+\begin{align*}
+	&x_S = \frac{P \cdot v_{rad}}{2 \pi} = 46945.87 \, \text{m} \\
+	&x_S = \frac{x_P M_P}{M_P + M_*} \qquad \Rightarrow \qquad M_P = \frac{x_S M_*}{x_P - x_S} = 33.79 \cdot 10^{24} \, \text{kg} \\
+	&\rho = \frac{M_P}{V} = \frac{3 M_P}{4 \pi R_P^3} = 5.79 \, \text{g/cm}^3
+\end{align*}
+Für die Rechnung wurde angenommen, dass sich der Planet kreisförmig um seinen Stern bewegt und somit $x_P = a$ gilt. \\
+Die Erde hat eine Masse von $M_E = 5.9737 \cdot 10^{24} \,$kg und eine Dichte von $\rho = 5.515 \,$g/cm$^3$, somit ist Corot-7b ein erdähnlicher Planet (er ist circa 5.66 mal so schwer wie die Erde und hat eine sehr ähnliche Dichte). \\
+
+\section{Leben auf anderen Planeten}
+Mithilfe der sogenannten Drake-Gleichung kann abgeschätzt werden, in wie vielen Planetensystemen intelligentes Leben existieren könnte.
+\begin{equation}
+	N = R_* \cdot f_p \cdot n_e \cdot f_l \cdot f_c \cdot f_i \cdot L
+\end{equation}
+$N$ gibt dabei die Anzahl außeriridischer Zivilisationen an, die mit uns kommunizieren könnten. \\
+Bedeutung der Faktoren:
+\begin{enumerate}
+	\item $R_* = 1 \,$yr$^{-1}$: mittlere Sternentstehungsrate in der Galaxis
+	\item $f_p = 0.2$: Anteil an Sternen mit einem Planetensystem
+	\item $n_e = 1$: durchschnittliche Anzahl an Planeten pro Stern innerhalb der Ökosphäre (habitable Zone)
+	\item $f_l = 1$: Anteil an Planeten mit Leben
+	\item $f_i = 1$: Anteil an Planeten mit intelligentem Leben
+	\item $f_c = 0.1$: Anteil an Planeten mit Interesse an interstellarer Kommunikation
+	\item $L = 10^6 \,$yr: Lebensdauer einer technischen Zivilisation
+\end{enumerate}
+Mithilfe der oben gegebenen Werte errechnet sich $N$ zu $N = 20000$. Geht man von der pessimistischeren Annahme aus, dass $f_l = f_i = 0.1$ und $L = 1000 \,$yr ist, erhält man $N = 0.2$. \\
+Der Wert für $N$ ist deshalb so klein, da sehr viele verschiedene Vorraussetzungen erfüllt sein müssen, damit sich intelligentes Leben entwickeln kann: Der Planet muss sich zunächst einmal in der habitablen Zone seines Sterns befinden, sodass es auf ihm warm genug ist, dass Wasser in seiner flüssigen Form vorkommen kann. Er sollte eine Atmosphäre mit einem gewissen Druck haben und diese auch halten können. Außerdem sind Bausteine und Nährstoffe nötig, damit überhaupt Leben entstehen kann (wie beispielsweise Kohlenstoffe). Der Stern sollte stark genug leuchten, sodass sein Licht das Wasser des Planeten erreichen kann und damit eine natürliche Energiequelle darstellt. \\
+Bisher wurden in der Milchstraße 3801 Exoplaneten entdeckt (Stand: 6.7.18). Da es circa $100 \cdot 10^9$ Galaxien gibt, könnte es im gesamten Universum mehr als $3.801 \cdot 10^{14}$ Exoplaneten geben. \\
+
+\section{Diskussion}
+Im vorliegenden Versuch wurden verschiedene Methoden zur Entdeckung und Beobachtung von Exoplaneten untersucht. Es wurde festgestellt, dass jede Methode gewisse Grenzen aufweist, sodass die bisher entdeckte Anzahl an Exoplaneten nur eine Untergrenze der realen Anzahl darstellt. \\
+Außerdem wurde sich mit der Frage beschäftigt inwieweit intelligentes Leben auf extrasolaren Planeten existieren könnte, wobei hierbei allerdings sehr grobe Annahmen und Thesen nötig sind, um überhaupt einen Wert zu erhalten. \\
+
+
+
+\end{document}
