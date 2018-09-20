@@ -1,0 +1,163 @@
+\documentclass[11pt]{article}		%muss immer am Anfang stehen [Schriftgröße]{Darstellung des Dokuments}
+\usepackage[ansinew]{inputenc}		%[Kodierung]{Kodierungladen}
+
+\usepackage{amsmath}		       	%{Matheumgebungen}
+\usepackage{amsfonts}				%{Matheformeln etc.}
+\usepackage{amssymb}				%{Mathesymbole}
+
+\usepackage[ngerman]{babel}			%[neue (deutsche) Rechtschreibung]{lädt Sonderzeichen für eine Sprache}
+\usepackage[utf8]{inputenc}			%richtige Darstellung der Umlaute
+\usepackage[a4paper]{geometry}		%[Form des Pdfs (zum Drucken, etc.)]{benötigtes Unterprogramm}
+\setlength{\parindent}{0pt}			%ist zuständig dafür, dass der Text nach einem Absatz nicht eingerückt wird (wenn nicht gewollt, löschen)
+\usepackage[T1]{fontenc}			%[Schriftform]{Schriftzeichen}
+\pagestyle {}						%hiermit lässt sich eine Seitennummerierung wählen, {empty} unterbindet sie
+
+\usepackage{hyperref}               %lädt ein Programm um im Pdf Links zu erzeugen (wenn nicht gewollt, löschen)
+\usepackage{graphicx}               %Programm zum Einbinden von Graphiken
+\usepackage{pst-pdf}                %Programm zum Einbinden von Bildern
+\usepackage{here}					%zum Erzwingen der Graphikposition
+\usepackage{enumitem} 				%Aufzählungen, Listungen mit verschieden Zählzeichen
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{subfigure}				%Bilder nebeneinander
+\usepackage{rotating}				%Graphiken rotieren
+
+% Kopfzeile
+\geometry{verbose,a4paper,tmargin=35mm,bmargin=30mm,lmargin=30mm,rmargin=30mm}
+\pagestyle{fancy}
+\rhead{\today} \chead{} \lhead{Astrophysikalisches Praktikum, Versuch 9: Vermessung von Kleinplaneten mittels CCD-Technik}
+\lfoot{} \cfoot{\thepage} \rfoot{}
+\sffamily
+
+\begin{document}
+% Titelseite
+\begin{titlepage}
+	\begin{center}
+		\includegraphics[scale=0.4]{2_1_GU-Logo.jpg} \\ [1cm]
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		{\Huge Astrophysikalisches Praktikum} \\
+		\bigskip
+		\rule{\textwidth}{1pt}
+		\\ [0.5cm]
+		{\Huge Versuch 9 \\ [0.5cm] Vermessung von Kleinplaneten mittels CCD-Technik}
+		\\ [0.5cm]
+		\rule{\textwidth}{1pt}
+		\\ [0.5cm]
+		{\LARGE Gruppe 2: Jan Röder, Julia Lienert \\ [0.2cm] Protokoll: Julia Lienert}
+		\\ [0.5cm]
+		{\LARGE Durchgeführt am: 12.09.2018}
+		\\ [0.5cm]
+		{\LARGE Assistenten: Dr. Mario Weigand, Benjamin Brückner}
+		\\ [0.5cm]
+		\rule{15cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+		\rule{15cm}{0.4pt}\\[-\baselineskip]
+		\vfill
+		\begin{flushright}
+			{\large
+				\bigskip
+				Institut für Angewandte Physik \\
+				Fachbereich 13 (Physik)\\
+				Johann Wolfgang Goethe-Universität \\
+				Frankfurt am Main \\
+				\bigskip
+			}
+		\end{flushright}			
+	\end{center}
+\end{titlepage}
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Einleitung}
+Im Sonnensystem sind bisher fast 700'000 Kleinplaneten (auch Asteroiden oder Planetoiden genannt) bekannt. Nur die wenigstens dieser Objekte sind größer als $100 \,$km, während sich die meisten von ihnen auf annähernd kreisförmigen Bahnen im Asteroidengürtel zwischen Mars und Jupiter bewegen. \\
+In diesem Versuch geht es um die Bestimmung der Bahnparameter eines Asteroiden, wobei dafür viele aufeinander folgende Beobachtungen durchgeführt werden müssen. Jedes Mal wird mithilfe einer Kamera das Gebiet, in dem sich das Objekt aufhält, aufgenommen und die äquatorialen Koordinaten desselben bestimmt. Diese Arbeit kann heutzutage auch von Amateurastronomen erledigt werden. \\
+
+\section{CCD-Kameras}
+\subsection{Aufgabe 1 \& 2}
+Früher wurden in der Astronomie Fotoplatten verwendet, heutzutage kommen Kameras mit CCD-Technik zum Einsatz. CCD steht hierbei für 'Charge Coupled Device' (ladungsgekoppeltes Bauteil), welches ein wichtiger Bestandteil der Kamera ist. Die CCD-Sensoren wurden ursprünglich entwickelt, um Daten zu speichern. Sie sind jedoch sehr lichtempfindlich, wodurch sie sich gut zur Aufnahme von astronomischen Bildern eignen. Die Lichtempfindlichkeit wird gesteigert durch eine größere Fläche der Sensoren, was jedoch auch zu einer verschlechterten Bildauflösung führt. \\
+Um die Funktionsweise der CCD-Kameras verstehen zu können, muss man wissen, dass die Technik auf dem inneren Photoeffekt beruht und die verwendeten Sensoren (Silizium-)Halbleiter sind. Werden diese mit Licht bestrahlt, erfolgt eine Anregung der Kristalle des Halbleiters, wodurch Elektronen frei werden. Dies kann allerdings nur dann stattfinden, wenn die Wellenlänge des ankommenden Lichts nicht zu lang ist (möglich ab dem Infrarot-Bereich). Die frei gewordenen Elektronen werden durch eine angelegte Spannung von den positiven 'Löchern' getrennt und in einer Speicherzelle (Potentialtopf) gesammelt. Dadurch kann direkt aufgrund der Proportionalität zwischen Ladungsmenge und eingestrahlter Lichtintensität letztere bestimmt werden. \\
+Bei zu großer Belichtungszeit wird die Ladungsmenge in der Speicherzelle zu groß, die Elektronen treten dann in Nachbarzellen über. Dieser Effekt wird als 'Blooming' bezeichnet. \\
+Nach dem Sammeln der Ladungen werden die Ladungspakete von jedem Sensor einzeln schrittweise bis zu einer Verstärkung weitergegeben. Dort wird das Ausgangssignal in eine elektrische Spannung umgewandelt, die proportional zur Ladungsmenge und damit zur Lichtintensität ist. Neben dieser Information enthält das Signal auch eine Information darüber, zu welchem Zeitpunkt die Lichtmenge auf den Sensor getroffen ist.
+
+\subsection{Aufgabe 3}
+Um Winkelabstände zwischen Sternen mithilfe einer CCD-Kamera bestimmen zu können, muss der Abbildungsmaßstab bekannt sein. Für eine Teleskop-Brennweite von $f = 2000 \,$mm und eine Pixelgröße von $x = 9 \cdot 10^{-6} \,$m berechnet sich dieser zu:
+\begin{align*}
+	&\alpha = 2 \cdot \arctan\left(\frac{x}{2f}\right) = (2.5783 \cdot 10^{-4}) \, \text{°} = 0.9282 \, " \\
+	&a = (2.5783 \cdot 10^{-4}) \, \text{°/Pixel} = 0.9282 \, " \text{/Pixel}
+\end{align*}
+Sonne und Mond haben von der Erde aus gesehen einen Winkeldurchmesser von $0.5 \,$°, sie sind auf dem Chip folglich $1939.25 \,$Pixel bzw. $17.45 \,$mm groß (da ein Pixel $9 \cdot 10^{-6} \,$m entspricht).
+
+\subsection{Aufgabe 4}
+Die Abbildungen von Sternen erscheinen auf den Aufnahmen der CCD-Kameras nicht punktförmig sondern ausgedehnt. Dies liegt bei Aufnahmen naher Objekte (wie beispielsweise der Sonne) an ihrem Eigendurchmesser, der - wie man anhand der vorherigen Aufgabe sehen kann - in einem gewissen Durchmesser auf dem CCD-Chip resultiert. Bei weiter entfernten Objekten kann die Ausdehnung auf den Aufnahmen allerdings nicht mehr durch den Eigendurchmesser der Sterne zustanden kommen, wie man anhand der Daten von Sirius sehen kann:
+\begin{align*}
+	&m = -2 \, \text{mag} \qquad M = 1.43 \, \text{mag} \qquad R = 1.71 \, R_{\odot} \\
+	&r = 10 \, \text{pc} \cdot 10^{\frac{m - M}{5 \, \text{mag}}} = 2.06 \, \text{pc} \\
+	&\alpha = 2 \cdot \arctan\left(\frac{R}{r}\right) = (2.15 \cdot 10^{-6}) \, \text{°} = 7.73 \, \text{mas} \\
+	&\text{Größe auf Chip (bestimmt über Abbildungsmaßstab): } 8.33 \cdot 10^{-3} \, \text{Pixel}
+\end{align*}
+Sirius sollte, wie oben berechnet, punktförmig auf der Aufnahme erscheinen. Da dies nicht der Fall ist, muss es andere Gründe als den Eigendurchmesser geben, die dazu führen, dass weit entfernte Objekte endliche Ausdehnungen besitzen. \\
+Ein Grund ist die Auflösung des Teleskops: Durch Beugungseffekte an den Rändern erscheint das Bild verzerrt. Außerdem kann es zu dem oben schon erwähnten Effekt des 'Blooming' kommen, dieser tritt bei zu langer Belichtungszeit auf. Da beim Blooming benachbarte Potentialtöpfe gefüllt werden, führt dies dazu, dass Objekte scheinbar eine größere Ausdehnung haben, als dies in Wirklichkeit der Fall ist. \\
+Folglich sind ausgedehnte Abbildungen nur selten die Folge des Eigendurchmessers des aufgenommenen Objekts, sondern vielmehr auf dessen Leuchtkraft zurückzuführen, da diese Störeffekte wie das Blooming noch verstärkt. \\
+
+\section{Asteroidenbahnen}
+\subsection{Aufgabe 1}
+Die klassischen Parameter einer Asteroidenbahn sind - ähnlich denen einer Planetenbahn - die folgenden (auch zu sehen in Abbildung \ref{fig:Bahnparameter}):
+\begin{enumerate}
+	\item Inklination zur Ekliptik
+	\item große und kleine Halbachse bzw. Exzentrizität
+	\item Umlaufdauer
+\end{enumerate}
+Auch die Länge des aufsteigenden Knotens (Orientierung der Knotenlinie) kann man für Asteroidenbahnen verwenden, sofern sich der Asteroid auf einer geschlossenen Ellipse bewegt.
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{2_2_Bahnparameter.PNG}
+	\caption{Klassische Parameter einer Asteroidenbahn (entnommen aus [1])}
+	\label{fig:Bahnparameter}
+\end{figure}
+
+\subsection{Aufgabe 2} \label{ssec:Asteroidenbahnen2}
+Da sich circa 95\% der Asteroiden im Asteroidengürtel zwischen den Planetenbahnen von Mars und Jupiter befinden, kann ihre große Halbachse mit $2-3.4 \,$AE relativ gut abgeschätzt werden. Durch Jupiter werden ihre Bahnen stabilisiert, sodass sie annähernd kreisförmig sind (geringe Exzentrizität) und ihre Inklination unter $20 \,$° liegt. Sie kreuzen folglich nicht die Bahnen der Planeten. \\
+
+\section{Astrometrie: Auswertung von Messdaten}
+In diesem Teil des Versuchs sollen Beobachtungsdaten des Taunus-Observatoriums, die Positionsdaten des Kleinplaneten Pallas enthalten, ausgewertet werden. Ziel ist es, seine Bahn mithilfe der zwei Computerprogramme 'Astrometrica' und 'Find\_Orb' und den Daten verschiedener Beobachtungen zu bestimmen. \\
+Dazu werden zunächst die Aufnahmen einer Beobachtungsnacht aus dem Jahr 2010 in Astrometrica geladen und durch 'blinken' der Bilder der Asteroid Pallas anhand seiner Eigenbewegung identifiziert. Nach Schließen der Animation und Eingabe der gegebenen Koordinaten der Bildmitte gleicht Astrometrica die Aufnahmen mit einem Sternkatalog ab. Dadurch wird eine Liste mit Referenzsternen für jedes Bild erstellt. Zur Bestimmung der Position von Pallas wird über den als Pallas identifizierten Lichtpunkt ein Gauß-Fit gelegt. Die Datenpunkte weichen vom Fit ab, da bei zu viel Lichteinfall die Gauß-Glocke oben abgeschnitten wird. Dies ist auch einer der Gründe, weshalb die Objekte auf den Aufnahmen nicht punktförmig sondern ausgedehnt erscheinen. \\
+Die durch den Fit gewonnenen Daten werden im Log-File abgespeichert. Nachdem man diesen Vorgang für jedes Bild der zwei Beobachtungsnächte durchgeführt hat, enthält das Log-File sechs Datenpunkte mit Objekt-ID, Aufnahmezeitpunkt, Helligkeit und den Koordinaten von Pallas (Rektaszension und Deklination). Allerdings reichen die Daten von nur zwei Nächten nicht aus, um die Bahnparameter zu berechnen. Da durch zwei Positionspunkte jede beliebige Bahnkurve gelegt werden kann, sind Daten von mindestens einer weiteren Nacht nötig. Deshalb werden die Daten einer weiteren Beobachtung dem Log-File hinzugefügt und mithilfe des Programms Find\_Orb die Bahnparameter berechnet. Zusätzlich werden diese noch einmal ermittelt, nachdem weitere Datenpunkte aus dem Jahr 2011 hinzugefügt wurden. \\
+Die so erhaltenen Daten sind in der Tabelle \ref{tab:Bahnparameter} zusammengefasst. Zum Vergleich enthält die Tabelle auch die jeweiligen Literaturwerte.
+\begin{table} [H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+									& Daten (ohne 2011)			& Daten (mit 2011)	& Literaturwert			\\
+									& 7 Beobachtungen			& 12 Beobachtungen	&						\\ \hline
+		mittlere Anomalie			& $201.61326 \,$°			& $94.62324 \,$°	& $96.148 \,$°			\\ \hline
+		große Halbachse				& $2.72652441 \,$AE			& $2.68554368 \,$AE	& $2.772 \,$AE			\\ \hline
+		numerische Exzentrizität	& $0.0142449$				& $0.2346234$		& $0.231$				\\ \hline
+		Umlaufzeit					& $4.50 \,$Jahre			& $4.40 \,$Jahre	& $4.62 \,$Jahre		\\ \hline
+		Argument des Perihels		& $225.99651 \,$°			& $302.26619 \,$°	& $310.272 \,$°			\\ \hline
+		Länge aufsteigender Knoten	& $168.04811 \,$°			& $173.43106 \,$°	& $171.369 \,$°			\\ \hline
+		Inklination					& $32.79392 \,$°			& $34.91966 \,$°	& $33.893 \,$°			\\ \hline
+		Periheldistanz				& $2.68768533 \,$AE			& $2.05545205 \,$AE	& $2.13 \,$AE			\\ \hline
+		Apheldistanz				& $2.76536349 \,$AE			& $3.31563532 \,$AE	& $3.41 \,$AE			\\ \hline
+	\end{tabular}
+	\caption{Aus den verschiedenen Beobachtungen gewonnene Bahnparameter des Asteroiden Pallas}
+	\label{tab:Bahnparameter}
+\end{table}
+Wie man anhand der obigen Tabelle sehen kann, liegen die meisten aus den Daten gewonnenen Bahnparameter näher am Literaturwert, wenn mehr Beobachtungen den Berechnungen der Parameter zugrunde liegen. \\
+Der Asteroid Pallas bewegt sich auf seiner Bahn im Asteroidengürtel zwischen Jupiter und Mars, wie man leicht durch Vergleich der Perihel- und Apheldistanz aus Tabelle \ref{tab:Bahnparameter} mit den in Abschnitt \ref{ssec:Asteroidenbahnen2} bereits genannten Werten erkennen kann. \\
+
+\section{Diskussion}
+Nachdem sich in diesem Versuch zunächst mit der CCD-Technik vertraut gemacht wurde, mit der heutzutage die meisten Bilder in der Astronomie aufgenommen werden, und man sich grundlegendes Wissen zu den Bahnparametern eines Asteroids angeeignet hat, folgte die Auswertung der Daten verschiedener Beobachtungsnächte. Diese wurden mithilfe zweier Computerprogramme analysiert, sodass man schlussendlich die Bahnparameter des Asteroiden Pallas erhalten hat. \\
+Durch Vergleich der erhaltenen Parameter mit Literaturwerten wurde festgestellt, dass die aus der Datenanalyse gewonnenen Werte sich mehr und mehr den Literaturwerten annähern, je mehr Beobachtungsnächte man in die Analyse mit einbezieht. \\
+
+\section{Quellen}
+\begin{enumerate}
+	\item Skript "Einführung in die Astronomie 1", Kapitel 2
+\end{enumerate}
+
+
+
+\end{document}

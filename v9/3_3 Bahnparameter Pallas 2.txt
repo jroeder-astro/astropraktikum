@@ -1,0 +1,22 @@
+Orbital elements:
+(2)
+   Perihelion 2009 Apr 10.485053 TT = 11:38:28 (JD 2454931.985053)
+Epoch 2010 Jun  7.0 TT = JDT 2455354.5                  Find_Orb
+M  94.62324              (2000.0)            P               Q
+n   0.22395241     Peri.  302.26619     -0.45103207     -0.89010212     
+a   2.68554368     Node   173.43106      0.88051586     -0.43178538     
+e   0.2346234      Incl.   34.91966     -0.14581454      0.14587525     
+P   4.40           H    4.4     G   0.15   q 2.05545205  Q 3.31563532
+From 12 observations 2010 June 4-2011 May 24;   RMS error 1063.939 arcseconds
+# State vector (heliocentric ecliptic J2000):
+#   -1.569401666290  -1.918377924392   1.455804128203 AU
+#    6.764093054274  -6.049040986153   3.655024717005 mAU/day
+# MOIDs: Me  1.8054 Ve  1.4644 Ea  1.2013 Ma  0.5880
+# MOIDs: Ju  2.0472 Sa  6.7038 Ur 15.9955 Ne 26.9731
+# Elements written: 12 Sep 2018 12:07:56 (JD 2458374.005509)
+# Full range of obs: 2010 June 4-2011 May 24 (12 observations)
+# Find_Orb ver: Mar  2 2010 18:03:42
+# Perturbers: 000001fe 
+# Tisserand relative to Earth: 2.98477
+# Tisserand relative to Jupiter: 3.08278
+# Tisserand relative to Neptune: 11.67303
