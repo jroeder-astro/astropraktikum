@@ -1,0 +1,223 @@
+\documentclass[11pt]{article}		%muss immer am Anfang stehen [Schriftgröße]{Darstellung des Dokuments}
+\usepackage[ansinew]{inputenc}		%[Kodierung]{Kodierungladen}
+
+\usepackage{amsmath}		       	%{Matheumgebungen}
+\usepackage{amsfonts}				%{Matheformeln etc.}
+\usepackage{amssymb}				%{Mathesymbole}
+
+\usepackage[ngerman]{babel}			%[neue (deutsche) Rechtschreibung]{lädt Sonderzeichen für eine Sprache}
+\usepackage[utf8]{inputenc}			%richtige Darstellung der Umlaute
+\usepackage[a4paper]{geometry}		%[Form des Pdfs (zum Drucken, etc.)]{benötigtes Unterprogramm}
+\setlength{\parindent}{0pt}			%ist zuständig dafür, dass der Text nach einem Absatz nicht eingerückt wird (wenn nicht gewollt, löschen)
+\usepackage[T1]{fontenc}			%[Schriftform]{Schriftzeichen}
+\pagestyle {}						%hiermit lässt sich eine Seitennummerierung wählen, {empty} unterbindet sie
+
+\usepackage{hyperref}               %lädt ein Programm um im Pdf Links zu erzeugen (wenn nicht gewollt, löschen)
+\usepackage{graphicx}               %Programm zum Einbinden von Graphiken
+\usepackage{pst-pdf}                %Programm zum Einbinden von Bildern
+\usepackage{here}					%zum Erzwingen der Graphikposition
+\usepackage{enumitem} 				%Aufzählungen, Listungen mit verschieden Zählzeichen
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{subfigure}				%Bilder nebeneinander
+\usepackage{rotating}				%Graphiken rotieren
+
+% Kopfzeile
+\geometry{verbose,a4paper,tmargin=35mm,bmargin=30mm,lmargin=30mm,rmargin=30mm}
+\pagestyle{fancy}
+\rhead{\today} \chead{} \lhead{Astrophysikalisches Praktikum, V11: Spektroskopie und Photometrie}
+\lfoot{} \cfoot{\thepage} \rfoot{}
+\sffamily
+
+\begin{document}
+% Titelseite
+\begin{titlepage}
+	\begin{center}
+		\includegraphics[scale=0.4]{2_1_GU-Logo.jpg} \\ [1cm]
+		\bigskip
+		\bigskip
+		\bigskip
+		\bigskip
+		{\Huge Astrophysikalisches Praktikum} \\
+		\bigskip
+		\rule{\textwidth}{1pt}
+		\\ [0.5cm]
+		{\Huge Versuch 11 \\ [0.5cm] Spektroskopie und Photometrie}
+		\\ [0.5cm]
+		\rule{\textwidth}{1pt}
+		\\ [0.5cm]
+		{\LARGE Gruppe 2: Jan Röder, Julia Lienert \\ [0.2cm] Protokoll: Julia Lienert}
+		\\ [0.5cm]
+		{\LARGE Durchgeführt am: 13.09.2018}
+		\\ [0.5cm]
+		{\LARGE Assistenten: Dr. Mario Weigand, Benjamin Brückner}
+		\\ [0.5cm]
+		\rule{15cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+		\rule{15cm}{0.4pt}\\[-\baselineskip]
+		\vfill
+		\begin{flushright}
+			{\large
+				\bigskip
+				Institut für Angewandte Physik \\
+				Fachbereich 13 (Physik)\\
+				Johann Wolfgang Goethe-Universität \\
+				Frankfurt am Main \\
+				\bigskip
+			}
+		\end{flushright}			
+	\end{center}
+\end{titlepage}
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Einleitung}
+Zur Aufnahme von Sternspektren werden sogenannte Spektrographen verwendet, die das ankommende Sternenlicht in seine einzelnen Bestandteile aufspalten. In diesen Spektren sind dann charakteristische Absorptionslinien sichtbar, anhand derer die Spektralklasse des beobachteten Sterns identifiziert werden kann. Außerdem kann durch Vergleich mit bekannten Spektren die Rotverschiebung beispielsweise eines Planeten des Sonnensystems bestimmt werden, woraus sich seine Rotationsgeschwindigkeit errechnen lässt. \\
+Ziel des Versuchs ist es, sich zunächst mit der Spektroskopie und der Photometrie vertraut zu machen, um anschließend Spektren von Jupiter zu untersuchen und dessen Rotationsgeschwindigkeit zu bestimmen. Im zweiten Teil des Versuchs werden Aufnahmen des California-Nebels betrachtet, um dessen Art, Entfernung und Ausdehnung abschätzen zu können. \\
+
+\section{Grundlagen}
+\subsection{Aufgabe 1}
+Abbildung \ref{fig:Spektrograph} a) zeigt den schematischen Aufbau eines Gitterspektrographen. Licht fällt durch das Objektiv des Teleskops, wo es durch einen Kollimatorspiegel auf ein Gitter projiziert wird. Dieses hat Dispersionseigenschaften, wodurch das Licht in seine Bestandteile zerlegt wird. Das aufgespaltene Licht fällt nun auf einen zweiten Spiegel (Objektiv der Kamera), der das Licht gerade so auf einen Detektor reflektiert, dass die Farben 'geordnet' dort auftreffen. Je nach Wellenlängenbereich werden verschiedene Arten von Detektoren verwendet. Die Rotationsmöglichkeit des Gitters bestimmt, welche Wellenlängen des einfallenden Lichts überhaupt bis zum Detektor kommen. \\
+Anstatt eines Gitters zur Aufspaltung des Lichts kann auch ein Prisma verwendet werden, der Aufbau eines solchen Spektrographen ist in Abbildung \ref{fig:Spektrograph} b) zu sehen.
+\begin{figure} [H]
+	\centering
+	\fbox{
+		\subfigure[Gitterspektrograph]{\includegraphics[width=0.45\linewidth]{2_2_Gitterspektrograph.png}}
+	}
+	\fbox{
+		\subfigure[Prismenspektrograph]{\includegraphics[width=0.45\linewidth]{2_3_Prismenspektrograph.PNG}}
+	}
+	\caption{Schematischer Aufbau eines Spektrographen (entnommen aus [1])}
+	\label{fig:Spektrograph}
+\end{figure}
+Die beiden Typen Spektrographen unterscheiden sich dadurch, dass das Dispersionsverhalten eines Gitters linear und das eines Prismas nicht-linear ist.
+
+\subsection{Aufgabe 2} \label{ssec:11.1.2}
+Photometrische Verfahren sind Messverfahren im Bereich des sichtbaren Lichts. In der Astronomie wird über die Breitbandphotometrie die Strahlungsstärke eines Objekts über einen größeren Wellenlängenbereich gemessen. Dies wird mit mehreren verschiedenen Filtern wiederholt, sodass sich der Spektraltyp eines Sterns bestimmen lässt. Kennt man den Spektraltyp, so weiß man auch, welche Farbe der Stern hat. \\
+Der Farbindex ist in der Astronomie ein Maß für die Farbe eines Sterns. Er ist definiert durch die Differenz aus scheinbarer Helligkeit im kurzwelligen Bereich und derjenigen im langwelligen Bereich. Je größer der Farbindex ist, desto rötlicher erscheint uns das Objekt. \\
+Da der Farbindex aufgrund interstellarer Extinktion von der Entfernung des betrachteten Objekts abhängt (kurzwelliges Licht wird stärker absorbiert als langwelliges Licht, das führt dazu, dass der gemessene Farbindex zu groß ist), wird der sogenannte Farbexzess verwendet, der dies berücksichtigt. Er ist als Differenz von gemessenem und tatsächlichem Farbindex definiert.
+\begin{equation} \label{eq:Farbexzess}
+	E_{B-V} = (B - V) - (B - V)_0
+\end{equation}
+
+\section{Sternspektren}
+\subsection{Aufgabe 1}
+Man kann Sterne einteilen, indem man sie nach ihren Farben ordnet. An dieser Einteilung in Spektralklassen kann man außerdem ablesen, wie heiß der Stern ungefähr ist, und wie massereich er in etwa ist. So ist ein O-Stern blau, mit einer Oberflächentemperatur von etwa $40.000 \,$K und ca. $60 \,$M$_{\odot}$. Dagegen sind K-Sterne orange, mit nur $4000 \,$K Oberflächentemperatur und $0.8 \,$M$_{\odot}$.
+
+\subsection{Aufgabe 2}
+Nimmt man mit einem Spektrographen ein Sternspektrum auf, werden Absorptionslinien auftreten. Diese Linienstruktur verändert sich mit der Spektralklasse. Die Dicke einer Spektrallinie gibt an, wie stark das Element vorhanden ist. Außerdem können die Linien durch Dopplereffekt und Photosphärentemperatur verbreitert werden.
+
+\subsection{Aufgabe 3}
+Vergleicht man die Sternspektren in Abbildung 11.2 der Versuchsanleitung mit den Beispielspektren in Abbildung 11.1, so lassen sich erstere wie folgt klassifizieren:
+\begin{enumerate}
+	\item A: M0
+	\item B: A0
+	\item C: F0
+\end{enumerate}
+
+\section{Jupiters Rotationsgeschwindigkeit}
+Für die Aufgabe verwendet werden die in Abbildung \ref{fig:SpektrumJupiter} zu sehenden optischen Spektren von Jupiter (mittlere Spektren) und der Sonne (oben und unten, als Vergleichsspektren).
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{2_4_Jupiterspektren.PNG}
+	\caption{Hochaufgelöste Spektren von Jupiter (Mitte) und Sonne (oben und unten) (entnommen aus [2])}
+	\label{fig:SpektrumJupiter}
+\end{figure}
+\subsection{Aufgabe 1}
+Der gemessene Abstand der Natrium-D-Linien in den gegebenen Spektren beträgt $9.5 \,$mm, der berechnete $5.974 \,$\AA. Daraus ergibt sich eine Dispersion von $0.6288 \,$\AA/mm.
+
+\subsection{Aufgabe 2}
+Die Atmosphäre von Jupiter besteht aus Wasserstoff, Helium, Methan und Ammoniak, trotzdem sieht man in seinen Spektren Natrium-Linien. Dies liegt daran, dass Jupiter das Sonnenlicht reflektiert und wir somit eigentlich ein Sonnenspektrum aufnehmen. Wie man anhand Abbildung \ref{fig:SpektrumJupiter} sehen kann, gibt es deutliche Natrium-Linien im direkt von der Sonne aufgenommenen Spektrum. Allerdings wird für die Vergleichsspektren auch nicht die Sonne direkt betrachtet, sondern das am Mond reflektierte Sonnenspektrum.
+
+\subsection{Aufgabe 3}
+Der Spalt eines Spektrographen muss einmal so über Jupiter gelegt werden, dass das Spektrums des Teils von Jupiter, der sich von uns weg dreht, aufgenommen werden kann. Für eine zweite Messung sollte der Spalt so liegen, dass eine Aufnahme des Spektrums des Teils von Jupiter, der sich auf uns zubewegt, möglich ist. Man erhält aus diesen Messungen ein gegenüber dem Sonnenspektrum rotverschobenes und ein blauverschobenes Spektrum. Durch Ermittlung dieser Verschiebung kann die Rotationsgeschwindigkeit berechnet werden.
+
+\subsection{Aufgabe 4}
+Um die Rotationsgeschwindigkeit von Jupiter ermitteln zu können, wird in den gegebenen Spektren eine Linie durch die Natrium-D-Linien der Sonnenspektren gelegt (zu sehen in Abbildung \ref{fig:Rotgeschw}). Man sieht, dass die Natrium-Linien des oberen Jupiterspektrums leicht nach links und die des unteren leicht nach rechts verschoben sind.
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{2_5_Rotationsgeschwindigkeit.pdf}
+	\caption{Hochaufgelöste Spektren von Jupiter (Mitte) und Sonne (oben und unten), die eingezeichnete rote Linie dient zum Ablesen der Rot- und Blauverschiebung (entnommen aus [2])}
+	\label{fig:Rotgeschw}
+\end{figure}
+Misst man die gesamte Verschiebung, erhält man einen Wert von $2.5 \,$mm, was einer Wellenlänge von $1.5721 \,$\AA entspricht. Die Messunsicherheit beim Ablesen beträgt hierbei $0.5 \,$mm. Daraus kann nun folgendermaßen die Rotationsgeschwindigkeit bestimmt werden:
+\begin{align*}
+	&\text{verwendete Formel: } \frac{\Delta \lambda}{\lambda} = z \simeq \frac{v}{c} \\
+	&v = \left(\frac{\Delta \lambda \cdot c}{5889.95 \, \text{\AA}} + \frac{\Delta \lambda \cdot c}{5895.924 \, \text{\AA}}\right) = 79978.0181 \, \text{m/s} \\
+	&v_{rot} = \frac{v}{4} = 19994.5045 \, \text{m/s}
+\end{align*}
+Um den korrekten Wert der Rotationsgeschwindigkeit zu erhalten, muss die aus der Rotverschiebung ermittelte Geschwindigkeit durch den Faktor 4 geteilt werden. Ein Faktor von 2 ergibt sich, da man Rot- und Blauverschiebung für die Rechnung verwendet; der andere Faktor 2 folgt aus einem doppelten Doppler-Effekt (das Sonnenlicht wird zu Jupiter gesendet und dort wieder reflektiert).
+
+\subsection{Aufgabe 5}
+Die doppelte Natrium-D-Linie entsteht durch die Spin-Bahn-Kopplung des Elektronenspins mit dem Bahndrehimpuls. Dadurch spaltet sich der 3p-Zustand von Natrium in zwei Zustände mit verschiedenem Gesamtdrehimpuls auf, was man als Feinstrukturaufspaltung bezeichnet. Beim Übergang von einem der beiden 3p-Zustände in den 3s-Grundzustand wird ein Photon emittiert, sodass man die doppelte Natrium-D-Linie sehen kann. \\
+
+\section{Photometrie: Der California-Nebel}
+In diesem Teil des Versuchs sollen Art, Entfernung und Ausdehnung des galaktischen California-Nebels im Sternbild Perseus bestimmt werden.
+\subsection{Aufgabe 1}
+Interstellare Materie hat ihren Ursprung im Urknall, Sternwinden und Supernovae. In unserer Milchstraße bildet sie nur einen sehr geringen Anteil an der gesamten Materie. Sie besteht zu einem Großteil aus Wasserstoff (90\%), der Rest ist Helium (10\%) und nur ein geringer Anteil entfällt auf schwerere Elemente. Die meiste interstellare Materie liegt in Form von Gasen vor (99\%), wobei diese ionisiert, atomar oder molekular sein können. Nur 1\% der Materie kommt als Staub vor.
+
+\subsection{Aufgabe 2}
+Emissionsnebel sind Wolken, die aus interstellarem Gas bestehen und Licht emittieren. Dieses stammt von einem oder mehreren benachbarten heißen, jungen Sternen, die im UV-Bereich leuchten. Oft sind die Nebel Überreste der Wolke, aus denen diese Sterne entstanden sind, und zumeist bestehen sie aus ionisiertem Wasserstoff. Deshalb werden sie auch HII-Regionen genannt. Der Wasserstoff ist auch der Grund dafür, dass Emissionsnebel häufig rot leuchten, sie können allerdings auch grün oder blau sein, wenn die Energie des eingestrahlten Lichts höher ist und zur Ionisation anderer Elemente ausreicht. \\
+Reflexionsnebel sind im Gegensatz dazu Wolken aus interstellarem Staub, die das Licht benachbarter Sterne streuen/reflektieren. Das Licht ist nicht energetisch genug, um die Nebel zu ionisieren, ihr Spektrum gleicht daher dem der sie anstrahlenden Sterne. Meist sind Reflexionsnebel blau, da blaues Licht mehr gestreut wird als rotes. \\
+Dunkelnebel sind Wolken, die die Sterne, die hinter ihnen liegen verdecken, indem sie deren Licht absorbieren. Sie bestehen aus interstellarer Materie, der Wasserstoff liegt in molekularer Form vor.
+
+\subsection{Aufgabe 3}
+Beim California-Nebel handelt es sich um einen Emissionsnebel. Dies kann man daran erkennen, dass auf der gegebenen Rotaufnahme der Nebel viel dunkler erscheint als aus der Blauaufnahme (und Emissionsnebel oftmals rötlich sind). \\
+Die Farbe eines Reflexionsnebels, dessen Helligkeit durch Lichtstreuung an kleinen interstellaren Staubpartikeln entsteht, ist - wie oben schon genannt - blau. Der Grund hierfür ist Rayleigh-Streuung: blaues Licht wird an Teilchen mit Durchmessern kleiner als die Lichtwellenlänge stärker gestreut als rotes. \\
+Ein Emissionsnebel dagegen leuchtet meistens rot aufgrund des Rekombinationsleuchtens von ionisiertem interstellarem Wasserstoff. Seine hellste Emissionslinie liegt bei $656.3 \,$nm  und gehört zur Balmer-Serie. Zu dieser Serie gehören alle Elektronenübergänge auf das zweitniedrigste Energieniveau. \\
+Dadurch, dass der California-Nebel ein Emissionsnebel ist und rot leuchtet, ergibt sich für den das Nebelleuchten anregenden Stern folgendes: Der Stern muss so viel Energie abstrahlen, dass er Wasserstoff ionisieren kann. Dazu sind $13.6 \,$eV nötig, was UV-Licht entspricht. Der Stern muss folglich blau sein.
+
+\subsection{Aufgabe 4}
+Als den Nebel anregender Stern kommt derjenige rechts unterhalb des California-Nebels infrage, da dieser auf der Blauaufnahme als der am hellsten im Blauen leuchtende zu erkennen ist. Mithilfe des Sternatlas und der Online-Datenbank 'Simbad' findet man heraus, dass der Stern Menkib heißt. Er hat eine Deklination von $\delta = +35\text{°}47'27.7"$ und eine Rektaszension von $\alpha = 3\text{h}58\text{m}57.9\text{s}$.
+
+\subsection{Aufgabe 5}
+Folgende Bänderbezeichnungen werden im Johnson-System verwendet:
+\begin{enumerate}
+	\item U = ultraviolett (366\,nm)
+	\item B = blau (438\,nm)
+	\item V = visuell (545\,nm)
+	\item R = rot (641\,nm)
+	\item I = infrarot (798\,nm)
+	\item J = infrarot (1220\,nm)
+	\item H = infrarot (1630\,nm)
+	\item K = infrarot (2190\,nm)
+\end{enumerate}
+
+\subsection{Aufgabe 6}
+Die scheinbare Helligkeit, Spektralklasse und Farbindizes können für den identifizierten Stern nachgeschaut werden. Um jedoch Entfernung und Temperatur bestimmen zu können, muss auch seine absolute Helligkeit bekannt sein. Diese erhält man aus dem Farben-Helligkeitsdiagramm in Abbildung 11.4 der Versuchsanleitung. Dazu wird allerdings der tatsächliche Farbindex von Menkib - also seine Eigenfarbe - benötigt. Dementsprechend ist eine Korrektur des gemessenen Farbindex nötig, da dieser sich - wie schon in Abschnitt \ref{ssec:11.1.2} erklärt - durch interstellare Materie ändert.
+
+\subsection{Aufgabe 7}
+Mithilfe des Zweifarbendiagramms in Abbildung 11.5 der Anleitung kann die Eigenfarbe von Menkib zu $(B-V)_0 = -0.31$ bestimmt werden. Zusammen mit dem nachgeschauten gemessenen Farbindex von $(B-V) = +0.01$ berechnet sich der Farbexzess über Gleichung \eqref{eq:Farbexzess} zu $E_{B-V} = 0.32$. Aus dem Farbexzess lässt sich die Extinktion ermitteln:
+\begin{equation*}
+	A_V = 3.2 \cdot E_{B-V} = 1.024
+\end{equation*}
+Außerdem kann mithilfe der Eigenfarbe die Temperatur des Sterns ermittelt werden, da Temperatur und Farbe direkt miteinander korreliert sind.
+\begin{equation*}
+	T = 4600 \, \text{K} \, \left(\frac{1}{0.92(B-V)_0 + 1.7} + \frac{1}{0.92(B-V)_0 + 0.62}\right) = 16990.8889 \, \text{K}
+\end{equation*}
+
+\subsection{Aufgabe 8}
+Die Spektralklasse von Menkib ist O7.5IIIe, der Stern gehört damit zu den Riesen. Mithilfe seiner Eigenfarbe und dieser Information kann aus Abbildung 11.4 der Anleitung seine absolute Helligkeit zu $M = -5 \,$mag bestimmt werden. Die scheinbare Helligkeit von Menkib ist $m = 4.1 \,$mag, sie muss wegen der Extinktion noch korrigiert werden zu $m_{korr} = m - A_V = 3.076 \,$mag. Mit dem korrigierten Wert kann der Abstand von Menkib nun über das Entfernungsmodul zu $r = 412.29 \,$pc berechnet werden. Damit ist auch der California-Nebel circa 412\,pc weit von uns entfernt.
+
+\subsection{Aufgabe 9}
+Im Sternatlas ist die Konturlinie des California-Nebels eingezeichnet, man kann seine Ausdehnung abschätzen, indem man sich ein imaginäres Viereck um den Nebel herum denkt und die Differenzen der Deklination und Rektaszension der Kanten abliest. Damit ergibt sich seine wahre Ausdehnung zu:
+\begin{align*}
+	&\Delta \alpha = 4\text{h}06\text{m} - 3\text{h}55\text{m} = 0.183 \, \text{h} = 2.75 \, \text{°} \qquad \Rightarrow \qquad x_{\alpha} = r \cdot \tan(\Delta \alpha) = 19.80 \, \text{pc} \\
+	&\Delta \delta = 37.2 \, \text{°} - 35.9 \, \text{°} = 1.3 \, \text{°} \qquad \Rightarrow \qquad x_{\delta} = r \cdot \tan(\Delta \delta) = 9.36 \, \text{pc}
+\end{align*}
+Der California-Nebel ist folglich circa $32 \,$pc x $15 \,$pc groß. \\
+
+\section{Diskussion}
+Im ersten Teil des Versuchs ging es darum, sich über die Aufnahme von Sternspektren zu informieren, um anschließend das Spektrum von Jupiter untersuchen zu können. Es wurde festgestellt, dass eins seiner Spektren gegenüber dem Sonnenspektrum leicht rot- und eins leicht blauverschoben ist. Dadurch konnte seine Rotationsgeschwindigkeit abgeschätzt werden. \\
+Im zweiten Versuchsteil wurden Aufnahmen des California-Nebels analysiert und seine Art anhand der charakteristischen Eigenschaften der verschiedenen Nebelarten bestimmt. Durch Ermittlung des ihn beleuchtenden Sterns konnte dessen Farbe, Temperatur und Entfernung berechnet werden. Dadurch ließ sich auch die Entfernung und Ausdehnung des California-Nebels abschätzen. \\
+
+\section{Quellen}
+\begin{enumerate}
+	\item http://www.lsw.uni-heidelberg.de/users/mcamenzi/HD\_Spektren.pdf
+	\item Versuchsanleitung zu Versuch 11: "Spektroskopie und Photometrie"
+\end{enumerate}
+
+
+
+\end{document}
